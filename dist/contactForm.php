@@ -13,5 +13,5 @@ if(isset($_POST['submit'])) {
 
 	mail($mailTo, $subject, $body, $mailFrom);
 
-	header("Location: index.html/mensaje.html")
+	header("Location: https://saleclosettest.netlify.app/mensaje.html")
 }
