@@ -594,6 +594,8 @@ const errorMessageMessage = document.querySelector('.errorMessage--message');
 
 const buttonForm = document.getElementById('form__button');
 
+let validation = false;
+
 inputName.addEventListener('input', validateName);
 inputEmail.addEventListener('input', validateEmail);
 inputMessage.addEventListener('input', validateMessage);
@@ -602,9 +604,11 @@ function validateName() {
   if (inputName.validity.valueMissing) {
     errorMessageName.textContent = '* Por favor completa el campo Nombre';
     inputName.classList.add('contact__input--error');
+    validation = false;
   } else {
     errorMessageName.textContent = '';
     inputName.classList.remove('contact__input--error');
+    validation = true;
   }
 }
 
@@ -613,13 +617,16 @@ function validateEmail() {
     errorMessageEmail.textContent =
       '* Por favor completa el campo Correo Electrónico';
     inputEmail.classList.add('contact__input--error');
+    validation = false;
   } else if (!inputEmail.validity.valid) {
     errorMessageEmail.textContent =
       'Por favor ingresa un Correo Electrónico válido';
     inputEmail.classList.add('contact__input--error');
+    validation = false;
   } else {
     errorMessageEmail.textContent = '';
     inputEmail.classList.remove('contact__input--error');
+    validation = true;
   }
 }
 
@@ -627,17 +634,21 @@ function validateMessage() {
   if (inputMessage.validity.valueMissing) {
     errorMessageMessage.textContent = '* Por favor completa el campo Mensaje';
     inputMessage.classList.add('contact__message--error');
+    validation = false;
   } else {
     errorMessageMessage.textContent = '';
     inputMessage.classList.remove('contact__message--error');
+    validation = true;
   }
 }
 
 function SubmitForm(e) {
-  // e.preventDefault();
   validateName();
   validateEmail();
   validateMessage();
+  if (!validation) {
+    e.preventDefault();
+  }
 }
 
 // Scroll to Top
