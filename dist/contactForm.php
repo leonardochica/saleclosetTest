@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST['submit'])) {
+if(isset($_POST['email'])) {
 	$userName = $_POST['name'];
 	$userEmail = $_POST['email'];
 	$userPhone = $_POST['phone'];
