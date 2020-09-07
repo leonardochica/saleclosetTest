@@ -1,0 +1,404 @@
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+// Buttons
+%btn-shared {
+  display: inline-block;
+  padding: 0.5em 0.7em;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.btn {
+  &--primary {
+    @extend %btn-shared;
+    background: $primary-color;
+    color: $white-color;
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+
+  &--secondary {
+    @extend %btn-shared;
+    background: $secondary-color;
+    color: $white-color;
+
+    &:hover {
+      background: lighten($secondary-color, 10%);
+    }
+  }
+
+  &--light {
+    @extend %btn-shared;
+    background: $light-color;
+
+    &:hover {
+      background: $secondary-color;
+    }
+  }
+
+  &--dark {
+    @extend %btn-shared;
+    background: $dark-color;
+    color: $white-color;
+
+    &:hover {
+      background: lighten($dark-color, 50%);
+    }
+  }
+}
+
+.link {
+  &--dark {
+    color: $dark-color;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &--light {
+    color: $white-color;
+
+    &:hover {
+      color: $dark-color;
+    }
+  }
+}
+
+// Margins
+.margin {
+  &--section {
+    margin: 2rem auto;
+  }
+
+  &--small {
+    margin: 1rem;
+  }
+
+  &--medium {
+    margin: 2rem;
+  }
+
+  &--large {
+    margin: 3rem;
+  }
+
+  &y--small {
+    margin: 1rem auto;
+  }
+
+  &y--medium {
+    margin: 2rem auto;
+  }
+
+  &y--large {
+    margin: 3rem auto;
+  }
+}
+
+// Margin
+.padding {
+  &--section {
+    padding: 2rem auto;
+  }
+
+  &--small {
+    padding: 1rem;
+  }
+
+  &--medium {
+    padding: 2rem;
+  }
+
+  &--large {
+    padding: 3rem;
+  }
+
+  &y--small {
+    padding: 1rem 0;
+  }
+
+  &y--medium {
+    padding: 2rem 0;
+  }
+
+  &y--large {
+    padding: 3rem 0;
+  }
+
+  &x--small {
+    padding: 0 1rem;
+  }
+
+  &x--medium {
+    padding: 0 2rem;
+  }
+
+  &x--large {
+    padding: 0 3rem;
+  }
+}
+
+// Section
+.section {
+  margin: 5rem 1rem;
+
+  &__title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: $font-family-secondary;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $dark-color;
+    border-bottom: 2px solid $dark-color;
+
+    @include for-smartphones {
+      font-size: 2rem;
+    }
+  }
+
+  &__body {
+    margin: 2rem 0;
+  }
+}
+
+// Product Card
+// =======================================
+// For Large Screen
+// Four Column: 220px, Three Column: 300px, Two Column: 400px;
+
+// For Tablet Landscape
+// Three Column: 215px, Two Column: 330px;
+
+// For Tablet Portrait
+// Two Column: 205px, One column: 400px ;
+
+// For Smartphones
+// Two Column: 135px (arrow size: 22px), One column: 280px ;
+
+$cardWidthLargeScreen: 285px;
+$cardWidthTabletLandscape: 275px;
+$cardWidthTabletPortrait: 310px;
+$cardWidthSmartphones: 280px;
+$cardWidthXsmallSmartphones: 250px;
+
+.products-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($cardWidthLargeScreen, 1fr));
+  grid-gap: 2rem;
+
+  @include for-tablet-landscape-down {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax($cardWidthTabletLandscape, 1fr)
+    );
+  }
+
+  @include for-tablet-portrait-down {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax($cardWidthTabletPortrait, 1fr)
+    );
+  }
+
+  @include for-smartphones {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax($cardWidthSmartphones, 1fr)
+    );
+  }
+
+  @include for-xsmall-smartphones {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax($cardWidthXsmallSmartphones, 1fr)
+    );
+  }
+
+  .card {
+    max-width: $cardWidthLargeScreen;
+    border: 2px solid $primary-color;
+    box-shadow: 3px 3px 5px $dark-color;
+    margin: 0 auto;
+
+    @include for-tablet-landscape-down {
+      max-width: $cardWidthTabletLandscape;
+    }
+
+    @include for-tablet-portrait-down {
+      max-width: $cardWidthTabletPortrait;
+    }
+
+    @include for-smartphones {
+      max-width: $cardWidthSmartphones;
+    }
+
+    @include for-xsmall-smartphones {
+      max-width: $cardWidthXsmallSmartphones;
+    }
+
+    &__image {
+      display: block;
+      max-width: $cardWidthLargeScreen;
+      object-fit: cover;
+
+      @include for-tablet-landscape-down {
+        max-width: $cardWidthTabletLandscape;
+      }
+
+      @include for-tablet-portrait-down {
+        max-width: $cardWidthTabletPortrait;
+      }
+
+      @include for-smartphones {
+        max-width: $cardWidthSmartphones;
+      }
+
+      @include for-xsmall-smartphones {
+        max-width: $cardWidthXsmallSmartphones;
+      }
+    }
+
+    &__bottom {
+      padding: 0.5rem;
+      font-family: $special-font-family;
+      background: lighten($color: $light-color, $amount: 5);
+    }
+
+    &__title {
+      font-family: $font-family-secondary;
+      color: $dark-color;
+    }
+
+    &__price {
+      color: $primary-color;
+      font-size: 1.1rem;
+    }
+
+    &__text {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__buttons {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin-top: 0.5rem;
+      margin-bottom: 0.3rem;
+    }
+
+    &__button {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s;
+
+      &.button--whatsapp {
+        margin-right: 0.5rem;
+        background: $whatsapp-color;
+        border: 2px solid $whatsapp-color;
+
+        &:hover {
+          color: $whatsapp-color;
+          background: lighten($color: $light-color, $amount: 5);
+        }
+      }
+
+      &.button--messenger {
+        background: $messenger-color;
+        border: 2px solid $messenger-color;
+
+        &:hover {
+          color: $messenger-color;
+          background: lighten($color: $light-color, $amount: 5);
+        }
+      }
+    }
+
+    &__icon {
+      font-size: 1.3rem;
+      margin-right: 0.3em;
+    }
+
+    &__contact {
+      margin-top: 0.3rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      &__link {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .button {
+        &--phone {
+          margin-right: 0.5rem;
+        }
+      }
+
+      &__icon {
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.splide {
+  &__arrow {
+    background: darken($color: $light-color, $amount: 10);
+    width: 35px;
+    height: 35px;
+
+    &:hover:not([disabled]) {
+      background: $secondary-color;
+      color: $light-color;
+    }
+
+    &--prev {
+      left: 2px;
+    }
+
+    &--next {
+      right: 2px;
+    }
+  }
+
+  &__pagination__page {
+    background: darken($color: $light-color, $amount: 15);
+    width: 10px;
+    height: 10px;
+
+    &:hover {
+      background: darken($color: $light-color, $amount: 30);
+    }
+
+    &.is-active {
+      background: $secondary-color;
+      opacity: 0.85;
+    }
+  }
+}

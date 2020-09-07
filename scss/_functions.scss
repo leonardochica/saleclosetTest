@@ -1,0 +1,16 @@
+// Set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+@mixin easeout {
+  transition: all 0.3s ease-out;
+}
+
+@mixin carousel-rotation($item, $distance) {
+  transform: rotateY($item * 40deg) translateZ($distance);
+}
