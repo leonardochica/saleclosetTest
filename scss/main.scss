@@ -1242,6 +1242,10 @@ $slideWidthXsmallSmartphones: 250px;
           font-size: 1.1rem;
           text-transform: uppercase;
         }
+
+        &__subject {
+          display: none;
+        }
       }
     }
   }

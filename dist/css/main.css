@@ -1095,6 +1095,8 @@ body {
     margin: 0 auto;
     font-size: 1.1rem;
     text-transform: uppercase; }
+  .section__contact .contact__form .contact__subject {
+    display: none; }
 
 .footer {
   padding: 1.5rem 0.5rem;
