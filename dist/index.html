@@ -486,7 +486,13 @@
             Escríbenos si tienes preguntas, dudas o comentarios.
           </p>
         </div>
-        <form method="POST" class="contact__form" data-netlify="true">
+        <form
+          method="POST"
+          novalidate
+          class="contact__form"
+          onsubmit="return SubmitForm(event)"
+          data-netlify="true"
+        >
           <div class="contact__form__item">
             <label class="contact__label" for="input__name">Nombre*</label>
             <input
