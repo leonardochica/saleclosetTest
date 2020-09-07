@@ -634,7 +634,7 @@ function validateMessage() {
 }
 
 function SubmitForm(e) {
-  e.preventDefault();
+  // e.preventDefault();
   validateName();
   validateEmail();
   validateMessage();
