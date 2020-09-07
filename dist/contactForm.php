@@ -15,3 +15,4 @@ if(isset($_POST['email'])) {
 
 	header('Location: index.html');
 }
+?>
