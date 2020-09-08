@@ -11,10 +11,10 @@ if(isset($_POST['submit'])) {
 	$body = "Mensaje Recibido de ".$userName."Email:".$userEmail."Mensaje: ".$message;
 	$mailFrom = "From: ".$userEmail;
 
-	echo $message;
-	// mail($mailTo, $subject, $body, $mailFrom);
+	// echo $message;
+	mail($mailTo, $subject, $body, $mailFrom);
 
-	// header('Location: index.html');
+	header('Location: https://saleclosettest.netlify.app/mensaje.html');
 }
 ?>
 
