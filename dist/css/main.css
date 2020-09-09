@@ -1044,6 +1044,7 @@ body {
       font-size: 1rem;
       font-family: "Signika", sans-serif; }
       .section__contact .contact__form .contact__form__item .contact__label__checkbox {
+        margin-left: 1.5rem;
         font-size: 0.8rem;
         font-family: "Signika", sans-serif;
         cursor: pointer; }
@@ -1062,7 +1063,9 @@ body {
       .section__contact .contact__form .contact__form__item .contact__message--error {
         border: 2px solid #d23d95; }
     .section__contact .contact__form .contact__form__item .contact__checkbox {
-      position: relative;
+      position: absolute;
+      top: 0.1rem;
+      left: 0;
       outline: none;
       appearance: none;
       -moz-appearance: none;
@@ -1070,15 +1073,23 @@ body {
       width: 17px;
       height: 17px;
       border: 2px solid #d23d95;
+      transition: all 0.3s ease-out;
       cursor: pointer; }
       .section__contact .contact__form .contact__form__item .contact__checkbox::before {
-        content: '\2713';
+        content: '\00a0';
         position: absolute;
         font-size: 0.8rem;
-        top: -0.2rem;
-        left: 0.1rem;
+        top: 0rem;
+        left: 0rem;
         width: 100%;
-        height: 100%; }
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      .section__contact .contact__form .contact__form__item .contact__checkbox:checked::before {
+        content: '\2713';
+        background: #d23d95;
+        color: #fff; }
     .section__contact .contact__form .contact__form__item .errorMessage--name {
       font-size: 0.8rem;
       margin-top: 0.3rem;
@@ -1088,6 +1099,10 @@ body {
       margin-top: 0.3rem;
       color: #d23d95; }
     .section__contact .contact__form .contact__form__item .errorMessage--message {
+      font-size: 0.8rem;
+      margin-top: 0.3rem;
+      color: #d23d95; }
+    .section__contact .contact__form .contact__form__item .errorMessage--checkbox {
       font-size: 0.8rem;
       margin-top: 0.3rem;
       color: #d23d95; }

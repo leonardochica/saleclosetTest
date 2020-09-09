@@ -39,151 +39,6 @@ function smoothScrolling(e) {
   });
 }
 
-// Showcase Draggable Slider
-// =======================================
-
-// Reload window when resizing
-// window.onresize = function () {
-//   location.reload();
-// };
-
-// window.addEventListener('click', function (e) {
-//   console.log(e.target);
-// });
-
-// const sliderItems = document.querySelector('.slider__items'),
-//   prev = document.querySelector('.prev'),
-//   next = document.querySelector('.next');
-
-// slide(sliderItems, prev, next);
-
-// function slide(items, prev, next) {
-//   let posX1 = 0,
-//     posX2 = 0,
-//     posInitial,
-//     posFinal,
-//     threshold = 100,
-//     slides = items.getElementsByClassName('slide'),
-//     slidesLength = slides.length,
-//     slideSize = items.getElementsByClassName('slide')[0].offsetWidth,
-//     firstSlide = slides[0],
-//     lastSlide = slides[slidesLength - 1],
-//     cloneFirst = firstSlide.cloneNode(true),
-//     cloneLast = lastSlide.cloneNode(true),
-//     index = 0,
-//     allowShift = true;
-
-//   // Copy first and last slide
-//   items.appendChild(cloneFirst);
-//   items.insertBefore(cloneLast, firstSlide);
-
-//   // Mouse and Touch events
-//   items.onmousedown = dragStart;
-
-//   // Touch events
-//   items.addEventListener('touchstart', dragStart);
-//   items.addEventListener('touchend', dragEnd);
-//   items.addEventListener('touchmove', dragAction);
-
-//   // Click events
-//   prev.addEventListener('click', function () {
-//     shiftSlide(-1);
-//   });
-//   next.addEventListener('click', function () {
-//     shiftSlide(1);
-//   });
-
-//   // Transition events
-//   items.addEventListener('transitionend', checkIndex);
-
-//   function dragStart(e) {
-//     e = e || window.event;
-//     e.preventDefault();
-
-//     posInitial = items.offsetLeft;
-
-//     if (e.type == 'touchstart') {
-//       posX1 = e.touches[0].clientX;
-//     } else {
-//       posX1 = e.clientX;
-//       document.onmouseup = dragEnd;
-//       document.onmousemove = dragAction;
-//     }
-//   }
-
-//   function dragAction(e) {
-//     e = e || window.event;
-
-//     if (e.type == 'touchmove') {
-//       posX2 = posX1 - e.touches[0].clientX;
-//       posX1 = e.touches[0].clientX;
-//     } else {
-//       posX2 = posX1 - e.clientX;
-//       posX1 = e.clientX;
-//     }
-
-//     items.style.left = items.offsetLeft - posX2 + 'px';
-//   }
-
-//   function dragEnd(e) {
-//     posFinal = items.offsetLeft;
-
-//     if (posFinal - posInitial < -threshold) {
-//       shiftSlide(1, 'drag');
-//     } else if (posFinal - posInitial > threshold) {
-//       shiftSlide(-1, 'drag');
-//     } else {
-//       items.style.left = posInitial + 'px';
-//     }
-
-//     document.onmouseup = null;
-//     document.onmousemove = null;
-//   }
-
-//   function shiftSlide(dir, action) {
-//     items.classList.add('shifting');
-
-//     if (allowShift) {
-//       if (!action) {
-//         posInitial = items.offsetLeft;
-//       }
-
-//       if (dir == 1) {
-//         items.style.left = posInitial - slideSize + 'px';
-//         index++;
-//       } else if (dir == -1) {
-//         items.style.left = posInitial + slideSize + 'px';
-//         index--;
-//       }
-//     }
-
-//     allowShift = false;
-//   }
-
-//   function checkIndex() {
-//     items.classList.remove('shifting');
-
-//     // Add class to slide with image background
-//     if (index === 1) {
-//       slides[2].classList.add('slide__animation');
-//     } else {
-//       slides[2].classList.remove('slide__animation');
-//     }
-
-//     if (index == -1) {
-//       items.style.left = -(slidesLength * slideSize) + 'px';
-//       index = slidesLength - 1;
-//     }
-
-//     if (index == slidesLength) {
-//       items.style.left = -(1 * slideSize) + 'px';
-//       index = 0;
-//     }
-
-//     allowShift = true;
-//   }
-// }
-
 // Tabs for Ropa Section
 // =======================================
 const tabs = document.querySelectorAll('[data-tab-target]');
@@ -596,6 +451,10 @@ const inputMessage = document.getElementById('input__message');
 
 const errorMessageMessage = document.querySelector('.errorMessage--message');
 
+const inputCheckbox = document.getElementById('input__checkbox');
+
+const errorMessageCheckbox = document.querySelector('.errorMessage--checkbox');
+
 const buttonForm = document.getElementById('form__button');
 
 let validation = false;
@@ -603,6 +462,7 @@ let validation = false;
 inputName.addEventListener('input', validateName);
 inputEmail.addEventListener('input', validateEmail);
 inputMessage.addEventListener('input', validateMessage);
+inputCheckbox.addEventListener('input', checkboxChecked);
 
 function validateName() {
   if (inputName.validity.valueMissing) {
@@ -614,6 +474,8 @@ function validateName() {
     inputName.classList.remove('contact__input--error');
     validation = true;
   }
+
+  return validation;
 }
 
 function validateEmail() {
@@ -632,6 +494,8 @@ function validateEmail() {
     inputEmail.classList.remove('contact__input--error');
     validation = true;
   }
+
+  return validation;
 }
 
 function validateMessage() {
@@ -644,13 +508,30 @@ function validateMessage() {
     inputMessage.classList.remove('contact__message--error');
     validation = true;
   }
+
+  return validation;
+}
+
+function checkboxChecked() {
+  if (inputCheckbox.validity.valueMissing) {
+    errorMessageCheckbox.textContent =
+      '* Por favor acepta la política de Protección de datos';
+    validation = false;
+  } else {
+    errorMessageCheckbox.textContent = '';
+    validation = true;
+  }
+
+  return validation;
 }
 
 function SubmitForm(e) {
-  validateName();
-  validateEmail();
-  validateMessage();
-  if (!validation) {
+  const valName = validateName();
+  const valEmail = validateEmail();
+  const valMessage = validateMessage();
+  const valCheckbox = checkboxChecked();
+
+  if (!valName || !valEmail || !valMessage || !valCheckbox) {
     e.preventDefault();
   }
 }
