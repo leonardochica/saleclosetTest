@@ -47,138 +47,142 @@ function smoothScrolling(e) {
 //   location.reload();
 // };
 
-const sliderItems = document.querySelector('.slider__items'),
-  prev = document.querySelector('.prev'),
-  next = document.querySelector('.next');
+// window.addEventListener('click', function (e) {
+//   console.log(e.target);
+// });
 
-slide(sliderItems, prev, next);
+// const sliderItems = document.querySelector('.slider__items'),
+//   prev = document.querySelector('.prev'),
+//   next = document.querySelector('.next');
 
-function slide(items, prev, next) {
-  let posX1 = 0,
-    posX2 = 0,
-    posInitial,
-    posFinal,
-    threshold = 100,
-    slides = items.getElementsByClassName('slide'),
-    slidesLength = slides.length,
-    slideSize = items.getElementsByClassName('slide')[0].offsetWidth,
-    firstSlide = slides[0],
-    lastSlide = slides[slidesLength - 1],
-    cloneFirst = firstSlide.cloneNode(true),
-    cloneLast = lastSlide.cloneNode(true),
-    index = 0,
-    allowShift = true;
+// slide(sliderItems, prev, next);
 
-  // Copy first and last slide
-  items.appendChild(cloneFirst);
-  items.insertBefore(cloneLast, firstSlide);
+// function slide(items, prev, next) {
+//   let posX1 = 0,
+//     posX2 = 0,
+//     posInitial,
+//     posFinal,
+//     threshold = 100,
+//     slides = items.getElementsByClassName('slide'),
+//     slidesLength = slides.length,
+//     slideSize = items.getElementsByClassName('slide')[0].offsetWidth,
+//     firstSlide = slides[0],
+//     lastSlide = slides[slidesLength - 1],
+//     cloneFirst = firstSlide.cloneNode(true),
+//     cloneLast = lastSlide.cloneNode(true),
+//     index = 0,
+//     allowShift = true;
 
-  // Mouse and Touch events
-  items.onmousedown = dragStart;
+//   // Copy first and last slide
+//   items.appendChild(cloneFirst);
+//   items.insertBefore(cloneLast, firstSlide);
 
-  // Touch events
-  items.addEventListener('touchstart', dragStart);
-  items.addEventListener('touchend', dragEnd);
-  items.addEventListener('touchmove', dragAction);
+//   // Mouse and Touch events
+//   items.onmousedown = dragStart;
 
-  // Click events
-  prev.addEventListener('click', function () {
-    shiftSlide(-1);
-  });
-  next.addEventListener('click', function () {
-    shiftSlide(1);
-  });
+//   // Touch events
+//   items.addEventListener('touchstart', dragStart);
+//   items.addEventListener('touchend', dragEnd);
+//   items.addEventListener('touchmove', dragAction);
 
-  // Transition events
-  items.addEventListener('transitionend', checkIndex);
+//   // Click events
+//   prev.addEventListener('click', function () {
+//     shiftSlide(-1);
+//   });
+//   next.addEventListener('click', function () {
+//     shiftSlide(1);
+//   });
 
-  function dragStart(e) {
-    e = e || window.event;
-    e.preventDefault();
+//   // Transition events
+//   items.addEventListener('transitionend', checkIndex);
 
-    posInitial = items.offsetLeft;
+//   function dragStart(e) {
+//     e = e || window.event;
+//     e.preventDefault();
 
-    if (e.type == 'touchstart') {
-      posX1 = e.touches[0].clientX;
-    } else {
-      posX1 = e.clientX;
-      document.onmouseup = dragEnd;
-      document.onmousemove = dragAction;
-    }
-  }
+//     posInitial = items.offsetLeft;
 
-  function dragAction(e) {
-    e = e || window.event;
+//     if (e.type == 'touchstart') {
+//       posX1 = e.touches[0].clientX;
+//     } else {
+//       posX1 = e.clientX;
+//       document.onmouseup = dragEnd;
+//       document.onmousemove = dragAction;
+//     }
+//   }
 
-    if (e.type == 'touchmove') {
-      posX2 = posX1 - e.touches[0].clientX;
-      posX1 = e.touches[0].clientX;
-    } else {
-      posX2 = posX1 - e.clientX;
-      posX1 = e.clientX;
-    }
+//   function dragAction(e) {
+//     e = e || window.event;
 
-    items.style.left = items.offsetLeft - posX2 + 'px';
-  }
+//     if (e.type == 'touchmove') {
+//       posX2 = posX1 - e.touches[0].clientX;
+//       posX1 = e.touches[0].clientX;
+//     } else {
+//       posX2 = posX1 - e.clientX;
+//       posX1 = e.clientX;
+//     }
 
-  function dragEnd(e) {
-    posFinal = items.offsetLeft;
+//     items.style.left = items.offsetLeft - posX2 + 'px';
+//   }
 
-    if (posFinal - posInitial < -threshold) {
-      shiftSlide(1, 'drag');
-    } else if (posFinal - posInitial > threshold) {
-      shiftSlide(-1, 'drag');
-    } else {
-      items.style.left = posInitial + 'px';
-    }
+//   function dragEnd(e) {
+//     posFinal = items.offsetLeft;
 
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
+//     if (posFinal - posInitial < -threshold) {
+//       shiftSlide(1, 'drag');
+//     } else if (posFinal - posInitial > threshold) {
+//       shiftSlide(-1, 'drag');
+//     } else {
+//       items.style.left = posInitial + 'px';
+//     }
 
-  function shiftSlide(dir, action) {
-    items.classList.add('shifting');
+//     document.onmouseup = null;
+//     document.onmousemove = null;
+//   }
 
-    if (allowShift) {
-      if (!action) {
-        posInitial = items.offsetLeft;
-      }
+//   function shiftSlide(dir, action) {
+//     items.classList.add('shifting');
 
-      if (dir == 1) {
-        items.style.left = posInitial - slideSize + 'px';
-        index++;
-      } else if (dir == -1) {
-        items.style.left = posInitial + slideSize + 'px';
-        index--;
-      }
-    }
+//     if (allowShift) {
+//       if (!action) {
+//         posInitial = items.offsetLeft;
+//       }
 
-    allowShift = false;
-  }
+//       if (dir == 1) {
+//         items.style.left = posInitial - slideSize + 'px';
+//         index++;
+//       } else if (dir == -1) {
+//         items.style.left = posInitial + slideSize + 'px';
+//         index--;
+//       }
+//     }
 
-  function checkIndex() {
-    items.classList.remove('shifting');
+//     allowShift = false;
+//   }
 
-    // Add class to slide with image background
-    if (index === 1) {
-      slides[2].classList.add('slide__animation');
-    } else {
-      slides[2].classList.remove('slide__animation');
-    }
+//   function checkIndex() {
+//     items.classList.remove('shifting');
 
-    if (index == -1) {
-      items.style.left = -(slidesLength * slideSize) + 'px';
-      index = slidesLength - 1;
-    }
+//     // Add class to slide with image background
+//     if (index === 1) {
+//       slides[2].classList.add('slide__animation');
+//     } else {
+//       slides[2].classList.remove('slide__animation');
+//     }
 
-    if (index == slidesLength) {
-      items.style.left = -(1 * slideSize) + 'px';
-      index = 0;
-    }
+//     if (index == -1) {
+//       items.style.left = -(slidesLength * slideSize) + 'px';
+//       index = slidesLength - 1;
+//     }
 
-    allowShift = true;
-  }
-}
+//     if (index == slidesLength) {
+//       items.style.left = -(1 * slideSize) + 'px';
+//       index = 0;
+//     }
+
+//     allowShift = true;
+//   }
+// }
 
 // Tabs for Ropa Section
 // =======================================

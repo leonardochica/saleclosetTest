@@ -20,8 +20,8 @@ body {
   right: 2rem;
   bottom: 2rem;
   z-index: 2;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,8 +35,8 @@ body {
 
   @include for-smartphones {
     right: 1.2rem;
-    width: 22px;
-    height: 22px;
+    width: 25px;
+    height: 25px;
   }
 
   &--visible {
@@ -49,10 +49,10 @@ body {
   }
 
   &__icon {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 
     @include for-smartphones {
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
   }
 }
@@ -271,6 +271,492 @@ $slideWidthTabletPortrait: 430px;
 $slideWidthSmartphones: 290px;
 $slideWidthXsmallSmartphones: 250px;
 
+// .showcase {
+//   &__container {
+//     position: relative;
+//   }
+
+//   &__background {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 500px;
+//     background: url('../images/showcase/background.jpg');
+//     background-size: cover;
+//     opacity: 0.2;
+//     z-index: -2;
+
+//     @include for-smartphones {
+//       height: 400px;
+//     }
+//   }
+
+//   .slider {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     width: $slideWidthLS;
+
+//     @include for-tablet-landscape-down {
+//       width: $slideWidthTabletLandscape;
+//     }
+
+//     @include for-tablet-portrait-down {
+//       width: $slideWidthTabletPortrait;
+//     }
+
+//     @include for-smartphones {
+//       width: $slideWidthSmartphones;
+//     }
+
+//     @include for-xsmall-smartphones {
+//       width: $slideWidthXsmallSmartphones;
+//     }
+
+//     &__wrapper {
+//       position: relative;
+//       overflow: hidden;
+//       z-index: 1;
+//     }
+
+//     &__items {
+//       position: relative;
+//       width: 10000px;
+//       display: flex;
+//       top: 0;
+//       left: -$slideWidthLS;
+
+//       @include for-tablet-landscape-down {
+//         left: -$slideWidthTabletLandscape;
+//       }
+
+//       @include for-tablet-portrait-down {
+//         left: -$slideWidthTabletPortrait;
+//       }
+
+//       @include for-smartphones {
+//         left: -$slideWidthSmartphones;
+//       }
+
+//       @include for-xsmall-smartphones {
+//         left: -$slideWidthXsmallSmartphones;
+//       }
+
+//       .slide {
+//         position: relative;
+//         width: $slideWidthLS;
+//         height: 500px;
+//         transition: all 1s;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+
+//         @include for-tablet-landscape-down {
+//           width: $slideWidthTabletLandscape;
+//         }
+
+//         @include for-tablet-portrait-down {
+//           width: $slideWidthTabletPortrait;
+//         }
+
+//         @include for-smartphones {
+//           width: $slideWidthSmartphones;
+//           height: 400px;
+//         }
+
+//         @include for-xsmall-smartphones {
+//           width: $slideWidthXsmallSmartphones;
+//         }
+
+//         &__image {
+//           width: 65%;
+//           object-fit: cover;
+
+//           @include for-tablet-portrait-down {
+//             width: 80%;
+//           }
+
+//           @include for-smartphones {
+//             width: 90%;
+//           }
+//         }
+
+//         &__map {
+//           width: 80%;
+//           height: 75%;
+//           object-fit: contain;
+
+//           @include for-smartphones {
+//             height: 65%;
+//           }
+//         }
+
+//         &__title {
+//           text-align: center;
+//           margin-top: 0.5rem;
+//           font-size: 1.2rem;
+//           text-transform: uppercase;
+
+//           @include for-tablet-portrait-down {
+//             font-size: 1.1rem;
+//           }
+
+//           @include for-smartphones {
+//             text-transform: initial;
+//           }
+//         }
+
+//         &__button {
+//           padding: 0.7rem 2rem;
+//           margin-top: 1rem;
+
+//           @include for-smartphones {
+//             font-size: 0.9rem;
+//           }
+//         }
+
+//         // Slide with Background Image
+//         &__container {
+//           position: relative;
+//           display: flex;
+//           flex-direction: column;
+//           justify-content: center;
+//           align-items: center;
+//           z-index: 10;
+//         }
+
+//         &__overlay {
+//           position: absolute;
+//           top: 0;
+//           left: 0;
+//           width: 100%;
+//           height: 100%;
+//         }
+
+//         &__overlay::after {
+//           content: '';
+//           position: absolute;
+//           top: 50%;
+//           left: 50%;
+//           transform: translate(-50%, -50%);
+//           width: 95%;
+//           height: 100%;
+//           background: rgba($color: $dark-color, $alpha: 0.65);
+//         }
+
+//         &__background {
+//           position: absolute;
+//           top: 50%;
+//           left: 50%;
+//           transform: translate(-50%, -50%);
+//           width: 95%;
+//           height: 100%;
+//           object-fit: cover;
+//           animation: imageScale 7s linear infinite alternate;
+//         }
+
+//         @keyframes imageScale {
+//           0% {
+//             object-position: left;
+//           }
+//           100% {
+//             object-position: right;
+//           }
+//         }
+
+//         &__item {
+//           color: $light-color;
+//           font-size: 2rem;
+//           text-align: center;
+//           line-height: 2.5;
+//           font-family: $special-font-family;
+//           text-transform: uppercase;
+//           letter-spacing: 2px;
+//           transform: translateX(800px);
+//           opacity: 0;
+
+//           @include for-tablet-portrait-down {
+//             font-size: 1.7rem;
+//           }
+
+//           @include for-smartphones {
+//             font-size: 1.2rem;
+//           }
+//         }
+
+//         &:nth-of-type(3) {
+//           .slide__button {
+//             transform: translateX(800px);
+//             opacity: 0;
+//           }
+//         }
+
+//         &__animation {
+//           .slide__item:nth-of-type(1) {
+//             animation: animateText 0.1s ease-in forwards;
+//             color: $white-color;
+//           }
+//           .slide__item:nth-of-type(2) {
+//             animation: animateText 0.4s ease-in forwards;
+//           }
+//           .slide__item:nth-of-type(3) {
+//             animation: animateText 0.7s ease-in forwards;
+//             color: $white-color;
+//           }
+//           .slide__item:nth-of-type(4) {
+//             animation: animateText 1s ease-in forwards;
+//           }
+//           .slide__item:nth-of-type(5) {
+//             animation: animateText 1.4s ease-in forwards;
+//             color: $white-color;
+//           }
+
+//           .slide__button {
+//             animation: animateText 1.7s ease-in forwards;
+//           }
+
+//           @keyframes animateText {
+//             0% {
+//               transform: translateX(800px);
+//             }
+
+//             100% {
+//               transform: translateX(0);
+//               opacity: 1;
+//             }
+//           }
+//         }
+
+//         // Slide with Carousel
+//         .carousel {
+//           position: relative;
+//           width: 170px;
+//           height: 170px;
+//           transform-style: preserve-3d;
+//           animation: animate 20s linear infinite;
+
+//           @include for-tablet-portrait-down {
+//             width: 120px;
+//             height: 120px;
+//           }
+
+//           @include for-smartphones {
+//             width: 90px;
+//             height: 90px;
+//           }
+
+//           &__item {
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             width: 100%;
+//             height: 100%;
+//             transform-origin: center;
+//             transform-style: preserve-3d;
+
+//             $distanceRotationLS: 270px;
+//             $distanceRotationTabletPortrait: 180px;
+//             $distanceRotationSmartphones: 130px;
+//             &:nth-of-type(1) {
+//               $i: 1;
+//               @include carousel-rotation($i, $distanceRotationLS);
+
+//               @include for-tablet-portrait-down {
+//                 @include carousel-rotation($i, $distanceRotationTabletPortrait);
+//               }
+
+//               @include for-smartphones {
+//                 @include carousel-rotation($i, $distanceRotationSmartphones);
+//               }
+//             }
+
+//             &:nth-of-type(2) {
+//               $i: 2;
+//               @include carousel-rotation($i, $distanceRotationLS);
+
+//               @include for-tablet-portrait-down {
+//                 @include carousel-rotation($i, $distanceRotationTabletPortrait);
+//               }
+
+//               @include for-smartphones {
+//                 @include carousel-rotation($i, $distanceRotationSmartphones);
+//               }
+//             }
+
+//             &:nth-of-type(3) {
+//               $i: 3;
+//               @include carousel-rotation($i, $distanceRotationLS);
+
+//               @include for-tablet-portrait-down {
+//                 @include carousel-rotation($i, $distanceRotationTabletPortrait);
+//               }
+
+//               @include for-smartphones {
+//                 @include carousel-rotation($i, $distanceRotationSmartphones);
+//               }
+//             }
+
+//             &:nth-of-type(4) {
+//               $i: 4;
+//               @include carousel-rotation($i, $distanceRotationLS);
+
+//               @include for-tablet-portrait-down {
+//                 @include carousel-rotation($i, $distanceRotationTabletPortrait);
+//               }
+
+//               @include for-smartphones {
+//                 @include carousel-rotation($i, $distanceRotationSmartphones);
+//               }
+//             }
+
+//             &:nth-of-type(5) {
+//               $i: 5;
+//               @include carousel-rotation($i, $distanceRotationLS);
+
+//               @include for-tablet-portrait-down {
+//                 @include carousel-rotation($i, $distanceRotationTabletPortrait);
+//               }
+
+//               @include for-smartphones {
+//                 @include carousel-rotation($i, $distanceRotationSmartphones);
+//               }
+//             }
+
+//             &:nth-of-type(6) {
+//               $i: 6;
+//               @include carousel-rotation($i, $distanceRotationLS);
+
+//               @include for-tablet-portrait-down {
+//                 @include carousel-rotation($i, $distanceRotationTabletPortrait);
+//               }
+
+//               @include for-smartphones {
+//                 @include carousel-rotation($i, $distanceRotationSmartphones);
+//               }
+//             }
+
+//             &:nth-of-type(7) {
+//               $i: 7;
+//               @include carousel-rotation($i, $distanceRotationLS);
+
+//               @include for-tablet-portrait-down {
+//                 @include carousel-rotation($i, $distanceRotationTabletPortrait);
+//               }
+
+//               @include for-smartphones {
+//                 @include carousel-rotation($i, $distanceRotationSmartphones);
+//               }
+//             }
+
+//             &:nth-of-type(8) {
+//               $i: 8;
+//               @include carousel-rotation($i, $distanceRotationLS);
+
+//               @include for-tablet-portrait-down {
+//                 @include carousel-rotation($i, $distanceRotationTabletPortrait);
+//               }
+
+//               @include for-smartphones {
+//                 @include carousel-rotation($i, $distanceRotationSmartphones);
+//               }
+//             }
+
+//             &:nth-of-type(9) {
+//               $i: 9;
+//               @include carousel-rotation($i, $distanceRotationLS);
+
+//               @include for-tablet-portrait-down {
+//                 @include carousel-rotation($i, $distanceRotationTabletPortrait);
+//               }
+
+//               @include for-smartphones {
+//                 @include carousel-rotation($i, $distanceRotationSmartphones);
+//               }
+//             }
+//           }
+
+//           &__image {
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             width: 100%;
+//             height: 100%;
+//             object-fit: cover;
+//             border: 1px solid $primary-color;
+//           }
+
+//           &__title {
+//             margin-top: 8rem;
+
+//             @include for-smartphones {
+//               margin-top: 6rem;
+//             }
+//           }
+//         }
+
+//         @keyframes animate {
+//           0% {
+//             transform: perspective(1000px) rotateY(0deg) rotateX(12deg);
+//           }
+//           100% {
+//             transform: perspective(1000px) rotateY(360deg) rotateX(12deg);
+//           }
+//         }
+//       }
+//     }
+
+//     .shifting {
+//       transition: left 1s ease-out;
+//     }
+
+//     .control {
+//       position: absolute;
+//       top: 50%;
+//       z-index: 2;
+//       font-size: 2.5rem;
+//       cursor: pointer;
+
+//       @include for-tablet-portrait-down {
+//         font-size: 2rem;
+//       }
+//     }
+
+//     .prev {
+//       left: -42px;
+
+//       @include for-tablet-portrait-down {
+//         left: -35px;
+//       }
+//     }
+
+//     .next {
+//       right: -42px;
+
+//       @include for-tablet-portrait-down {
+//         right: -35px;
+//       }
+//     }
+
+//     .prev:active,
+//     .next:active,
+//     .prev:hover,
+//     .next:hover {
+//       transform: scale(1.2);
+//       color: $primary-color;
+//     }
+//   }
+// }
+
+// Variables for slide width
+$slideHeightLS: 490px;
+$slideHeightTabletLandscape: 450px;
+$slideHeightTabletPortrait: 430px;
+$slideHeightSmartphones: 380px;
+// $slideWidthXsmallSmartphones: 250px;
+
 .showcase {
   &__container {
     position: relative;
@@ -281,471 +767,441 @@ $slideWidthXsmallSmartphones: 250px;
     top: 0;
     left: 0;
     width: 100%;
-    height: 500px;
+    height: $slideHeightLS;
     background: url('../images/showcase/background.jpg');
     background-size: cover;
     opacity: 0.2;
     z-index: -2;
 
-    @include for-smartphones {
-      height: 400px;
-    }
-  }
-
-  .slider {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: $slideWidthLS;
-
     @include for-tablet-landscape-down {
-      width: $slideWidthTabletLandscape;
+      height: $slideHeightTabletLandscape;
     }
 
     @include for-tablet-portrait-down {
-      width: $slideWidthTabletPortrait;
+      height: $slideHeightTabletPortrait;
     }
 
     @include for-smartphones {
-      width: $slideWidthSmartphones;
+      height: $slideHeightSmartphones;
     }
-
-    @include for-xsmall-smartphones {
-      width: $slideWidthXsmallSmartphones;
-    }
-
-    &__wrapper {
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-    }
-
-    &__items {
-      position: relative;
-      width: 10000px;
-      display: flex;
-      top: 0;
-      left: -$slideWidthLS;
-
-      @include for-tablet-landscape-down {
-        left: -$slideWidthTabletLandscape;
-      }
-
-      @include for-tablet-portrait-down {
-        left: -$slideWidthTabletPortrait;
-      }
-
+  }
+  .splide {
+    &__arrow {
       @include for-smartphones {
-        left: -$slideWidthSmartphones;
+        width: 23px;
+        height: 23px;
       }
 
-      @include for-xsmall-smartphones {
-        left: -$slideWidthXsmallSmartphones;
-      }
-
-      .slide {
-        position: relative;
-        width: $slideWidthLS;
-        height: 500px;
-        transition: all 1s;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      &--prev {
+        left: 2rem;
 
         @include for-tablet-landscape-down {
-          width: $slideWidthTabletLandscape;
+          left: 1.1rem;
         }
 
         @include for-tablet-portrait-down {
-          width: $slideWidthTabletPortrait;
+          left: 0.1rem;
+        }
+      }
+
+      &--next {
+        right: 2rem;
+
+        @include for-tablet-landscape-down {
+          right: 1.1rem;
+        }
+
+        @include for-tablet-portrait-down {
+          right: 0.1rem;
+        }
+      }
+
+      i {
+        font-size: 2rem;
+
+        @include for-smartphones {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    &__slide {
+      height: $slideHeightLS;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @include for-tablet-landscape-down {
+        height: $slideHeightTabletLandscape;
+      }
+
+      @include for-tablet-portrait-down {
+        height: $slideHeightTabletPortrait;
+      }
+
+      @include for-smartphones {
+        height: $slideHeightSmartphones;
+      }
+
+      // Slide with Carousel
+      .carousel {
+        position: relative;
+        width: 170px;
+        height: 170px;
+        transform-style: preserve-3d;
+        animation: animate 20s linear infinite;
+
+        @include for-tablet-portrait-down {
+          width: 120px;
+          height: 120px;
         }
 
         @include for-smartphones {
-          width: $slideWidthSmartphones;
-          height: 400px;
+          width: 90px;
+          height: 90px;
         }
 
-        @include for-xsmall-smartphones {
-          width: $slideWidthXsmallSmartphones;
-        }
-
-        &__image {
-          width: 65%;
-          object-fit: cover;
-
-          @include for-tablet-portrait-down {
-            width: 80%;
-          }
-
-          @include for-smartphones {
-            width: 90%;
-          }
-        }
-
-        &__map {
-          width: 80%;
-          height: 75%;
-          object-fit: contain;
-
-          @include for-smartphones {
-            height: 65%;
-          }
-        }
-
-        &__title {
-          text-align: center;
-          margin-top: 0.5rem;
-          font-size: 1.2rem;
-          text-transform: uppercase;
-
-          @include for-tablet-portrait-down {
-            font-size: 1.1rem;
-          }
-
-          @include for-smartphones {
-            text-transform: initial;
-          }
-        }
-
-        &__button {
-          padding: 0.7rem 2rem;
-          margin-top: 1rem;
-
-          @include for-smartphones {
-            font-size: 0.9rem;
-          }
-        }
-
-        // Slide with Background Image
-        &__container {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          z-index: 10;
-        }
-
-        &__overlay {
+        &__item {
           position: absolute;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
-        }
-
-        &__overlay::after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 95%;
-          height: 100%;
-          background: rgba($color: $dark-color, $alpha: 0.65);
-        }
-
-        &__background {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 95%;
-          height: 100%;
-          object-fit: cover;
-          animation: imageScale 7s linear infinite alternate;
-        }
-
-        @keyframes imageScale {
-          0% {
-            object-position: left;
-          }
-          100% {
-            object-position: right;
-          }
-        }
-
-        &__item {
-          color: $light-color;
-          font-size: 2rem;
-          text-align: center;
-          line-height: 2.5;
-          font-family: $special-font-family;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          transform: translateX(800px);
-          opacity: 0;
-
-          @include for-tablet-portrait-down {
-            font-size: 1.7rem;
-          }
-
-          @include for-smartphones {
-            font-size: 1.2rem;
-          }
-        }
-
-        &:nth-of-type(3) {
-          .slide__button {
-            transform: translateX(800px);
-            opacity: 0;
-          }
-        }
-
-        &__animation {
-          .slide__item:nth-of-type(1) {
-            animation: animateText 0.1s ease-in forwards;
-            color: $white-color;
-          }
-          .slide__item:nth-of-type(2) {
-            animation: animateText 0.4s ease-in forwards;
-          }
-          .slide__item:nth-of-type(3) {
-            animation: animateText 0.7s ease-in forwards;
-            color: $white-color;
-          }
-          .slide__item:nth-of-type(4) {
-            animation: animateText 1s ease-in forwards;
-          }
-          .slide__item:nth-of-type(5) {
-            animation: animateText 1.4s ease-in forwards;
-            color: $white-color;
-          }
-
-          .slide__button {
-            animation: animateText 1.7s ease-in forwards;
-          }
-
-          @keyframes animateText {
-            0% {
-              transform: translateX(800px);
-            }
-
-            100% {
-              transform: translateX(0);
-              opacity: 1;
-            }
-          }
-        }
-
-        // Slide with Carousel
-        .carousel {
-          position: relative;
-          width: 170px;
-          height: 170px;
+          transform-origin: center;
           transform-style: preserve-3d;
-          animation: animate 20s linear infinite;
 
-          @include for-tablet-portrait-down {
-            width: 120px;
-            height: 120px;
-          }
+          $distanceRotationLS: 270px;
+          $distanceRotationTabletPortrait: 180px;
+          $distanceRotationSmartphones: 130px;
+          &:nth-of-type(1) {
+            $i: 1;
+            @include carousel-rotation($i, $distanceRotationLS);
 
-          @include for-smartphones {
-            width: 90px;
-            height: 90px;
-          }
-
-          &__item {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transform-origin: center;
-            transform-style: preserve-3d;
-
-            $distanceRotationLS: 270px;
-            $distanceRotationTabletPortrait: 180px;
-            $distanceRotationSmartphones: 130px;
-            &:nth-of-type(1) {
-              $i: 1;
-              @include carousel-rotation($i, $distanceRotationLS);
-
-              @include for-tablet-portrait-down {
-                @include carousel-rotation($i, $distanceRotationTabletPortrait);
-              }
-
-              @include for-smartphones {
-                @include carousel-rotation($i, $distanceRotationSmartphones);
-              }
+            @include for-tablet-portrait-down {
+              @include carousel-rotation($i, $distanceRotationTabletPortrait);
             }
-
-            &:nth-of-type(2) {
-              $i: 2;
-              @include carousel-rotation($i, $distanceRotationLS);
-
-              @include for-tablet-portrait-down {
-                @include carousel-rotation($i, $distanceRotationTabletPortrait);
-              }
-
-              @include for-smartphones {
-                @include carousel-rotation($i, $distanceRotationSmartphones);
-              }
-            }
-
-            &:nth-of-type(3) {
-              $i: 3;
-              @include carousel-rotation($i, $distanceRotationLS);
-
-              @include for-tablet-portrait-down {
-                @include carousel-rotation($i, $distanceRotationTabletPortrait);
-              }
-
-              @include for-smartphones {
-                @include carousel-rotation($i, $distanceRotationSmartphones);
-              }
-            }
-
-            &:nth-of-type(4) {
-              $i: 4;
-              @include carousel-rotation($i, $distanceRotationLS);
-
-              @include for-tablet-portrait-down {
-                @include carousel-rotation($i, $distanceRotationTabletPortrait);
-              }
-
-              @include for-smartphones {
-                @include carousel-rotation($i, $distanceRotationSmartphones);
-              }
-            }
-
-            &:nth-of-type(5) {
-              $i: 5;
-              @include carousel-rotation($i, $distanceRotationLS);
-
-              @include for-tablet-portrait-down {
-                @include carousel-rotation($i, $distanceRotationTabletPortrait);
-              }
-
-              @include for-smartphones {
-                @include carousel-rotation($i, $distanceRotationSmartphones);
-              }
-            }
-
-            &:nth-of-type(6) {
-              $i: 6;
-              @include carousel-rotation($i, $distanceRotationLS);
-
-              @include for-tablet-portrait-down {
-                @include carousel-rotation($i, $distanceRotationTabletPortrait);
-              }
-
-              @include for-smartphones {
-                @include carousel-rotation($i, $distanceRotationSmartphones);
-              }
-            }
-
-            &:nth-of-type(7) {
-              $i: 7;
-              @include carousel-rotation($i, $distanceRotationLS);
-
-              @include for-tablet-portrait-down {
-                @include carousel-rotation($i, $distanceRotationTabletPortrait);
-              }
-
-              @include for-smartphones {
-                @include carousel-rotation($i, $distanceRotationSmartphones);
-              }
-            }
-
-            &:nth-of-type(8) {
-              $i: 8;
-              @include carousel-rotation($i, $distanceRotationLS);
-
-              @include for-tablet-portrait-down {
-                @include carousel-rotation($i, $distanceRotationTabletPortrait);
-              }
-
-              @include for-smartphones {
-                @include carousel-rotation($i, $distanceRotationSmartphones);
-              }
-            }
-
-            &:nth-of-type(9) {
-              $i: 9;
-              @include carousel-rotation($i, $distanceRotationLS);
-
-              @include for-tablet-portrait-down {
-                @include carousel-rotation($i, $distanceRotationTabletPortrait);
-              }
-
-              @include for-smartphones {
-                @include carousel-rotation($i, $distanceRotationSmartphones);
-              }
-            }
-          }
-
-          &__image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border: 1px solid $primary-color;
-          }
-
-          &__title {
-            margin-top: 8rem;
 
             @include for-smartphones {
-              margin-top: 6rem;
+              @include carousel-rotation($i, $distanceRotationSmartphones);
+            }
+          }
+
+          &:nth-of-type(2) {
+            $i: 2;
+            @include carousel-rotation($i, $distanceRotationLS);
+
+            @include for-tablet-portrait-down {
+              @include carousel-rotation($i, $distanceRotationTabletPortrait);
+            }
+
+            @include for-smartphones {
+              @include carousel-rotation($i, $distanceRotationSmartphones);
+            }
+          }
+
+          &:nth-of-type(3) {
+            $i: 3;
+            @include carousel-rotation($i, $distanceRotationLS);
+
+            @include for-tablet-portrait-down {
+              @include carousel-rotation($i, $distanceRotationTabletPortrait);
+            }
+
+            @include for-smartphones {
+              @include carousel-rotation($i, $distanceRotationSmartphones);
+            }
+          }
+
+          &:nth-of-type(4) {
+            $i: 4;
+            @include carousel-rotation($i, $distanceRotationLS);
+
+            @include for-tablet-portrait-down {
+              @include carousel-rotation($i, $distanceRotationTabletPortrait);
+            }
+
+            @include for-smartphones {
+              @include carousel-rotation($i, $distanceRotationSmartphones);
+            }
+          }
+
+          &:nth-of-type(5) {
+            $i: 5;
+            @include carousel-rotation($i, $distanceRotationLS);
+
+            @include for-tablet-portrait-down {
+              @include carousel-rotation($i, $distanceRotationTabletPortrait);
+            }
+
+            @include for-smartphones {
+              @include carousel-rotation($i, $distanceRotationSmartphones);
+            }
+          }
+
+          &:nth-of-type(6) {
+            $i: 6;
+            @include carousel-rotation($i, $distanceRotationLS);
+
+            @include for-tablet-portrait-down {
+              @include carousel-rotation($i, $distanceRotationTabletPortrait);
+            }
+
+            @include for-smartphones {
+              @include carousel-rotation($i, $distanceRotationSmartphones);
+            }
+          }
+
+          &:nth-of-type(7) {
+            $i: 7;
+            @include carousel-rotation($i, $distanceRotationLS);
+
+            @include for-tablet-portrait-down {
+              @include carousel-rotation($i, $distanceRotationTabletPortrait);
+            }
+
+            @include for-smartphones {
+              @include carousel-rotation($i, $distanceRotationSmartphones);
+            }
+          }
+
+          &:nth-of-type(8) {
+            $i: 8;
+            @include carousel-rotation($i, $distanceRotationLS);
+
+            @include for-tablet-portrait-down {
+              @include carousel-rotation($i, $distanceRotationTabletPortrait);
+            }
+
+            @include for-smartphones {
+              @include carousel-rotation($i, $distanceRotationSmartphones);
+            }
+          }
+
+          &:nth-of-type(9) {
+            $i: 9;
+            @include carousel-rotation($i, $distanceRotationLS);
+
+            @include for-tablet-portrait-down {
+              @include carousel-rotation($i, $distanceRotationTabletPortrait);
+            }
+
+            @include for-smartphones {
+              @include carousel-rotation($i, $distanceRotationSmartphones);
             }
           }
         }
 
-        @keyframes animate {
-          0% {
-            transform: perspective(1000px) rotateY(0deg) rotateX(12deg);
-          }
-          100% {
-            transform: perspective(1000px) rotateY(360deg) rotateX(12deg);
+        &__image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border: 1px solid $primary-color;
+        }
+
+        &__title {
+          margin-top: 8rem;
+
+          @include for-smartphones {
+            margin-top: 6rem;
           }
         }
       }
+
+      @keyframes animate {
+        0% {
+          transform: perspective(1000px) rotateY(0deg) rotateX(12deg);
+        }
+        100% {
+          transform: perspective(1000px) rotateY(360deg) rotateX(12deg);
+        }
+      }
+    }
+  }
+
+  .slide {
+    &__image {
+      display: block;
+      height: 320px;
+      object-fit: cover;
+      margin: 0 auto;
+
+      @include for-tablet-landscape-down {
+        height: 300px;
+      }
+
+      @include for-tablet-portrait-down {
+        height: 280px;
+        width: 80%;
+        object-fit: contain;
+      }
+
+      @include for-smartphones {
+        height: 220px;
+        // width: 70%;
+      }
     }
 
-    .shifting {
-      transition: left 1s ease-out;
+    &__map {
+      width: 100%;
+      height: 320px;
+      object-fit: contain;
+
+      @include for-tablet-landscape-down {
+        height: 300px;
+      }
+
+      @include for-tablet-portrait-down {
+        height: 280px;
+      }
+
+      @include for-smartphones {
+        height: 230px;
+      }
     }
 
-    .control {
+    &__title {
+      text-align: center;
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+
+      @include for-tablet-portrait-down {
+        font-size: 1.1rem;
+      }
+
+      @include for-smartphones {
+        text-transform: initial;
+        font-size: 1rem;
+      }
+    }
+
+    &__button {
+      padding: 0.7rem 2rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+
+      @include for-smartphones {
+        font-size: 0.9rem;
+      }
+    }
+
+    // Slide with Background Image
+    &__container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 90%;
+      height: $slideHeightLS;
+      transform: translateX(5.5%);
+    }
+
+    &__overlay::after {
+      content: '';
       position: absolute;
       top: 50%;
-      z-index: 2;
-      font-size: 2.5rem;
-      cursor: pointer;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 95%;
+      height: 100%;
+      background: rgba($color: $dark-color, $alpha: 0.65);
+    }
 
-      @include for-tablet-portrait-down {
-        font-size: 2rem;
+    &__background {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 95%;
+      height: 100%;
+      object-fit: cover;
+      animation: imageScale 7s linear infinite alternate;
+    }
+
+    @keyframes imageScale {
+      0% {
+        object-position: left;
+      }
+      100% {
+        object-position: right;
       }
     }
 
-    .prev {
-      left: -42px;
+    &__item {
+      color: $light-color;
+      font-size: 2rem;
+      text-align: center;
+      line-height: 2.2;
+      font-family: $special-font-family;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transform: translateX(800px);
+      opacity: 0;
+
+      @include for-tablet-landscape-down {
+        line-height: 2.1;
+      }
 
       @include for-tablet-portrait-down {
-        left: -35px;
+        font-size: 1.7rem;
+      }
+
+      @include for-smartphones {
+        font-size: 1.2rem;
       }
     }
 
-    .next {
-      right: -42px;
+    &__button--translate {
+      transform: translateX(800px);
+      opacity: 0;
+    }
+  }
 
-      @include for-tablet-portrait-down {
-        right: -35px;
-      }
+  .splide__slide.is-active {
+    .slide__item:nth-of-type(1) {
+      animation: animateText 0.1s ease-in forwards;
+      color: $white-color;
+    }
+    .slide__item:nth-of-type(2) {
+      animation: animateText 0.4s ease-in forwards;
+    }
+    .slide__item:nth-of-type(3) {
+      animation: animateText 0.7s ease-in forwards;
+      color: $white-color;
+    }
+    .slide__item:nth-of-type(4) {
+      animation: animateText 1s ease-in forwards;
+    }
+    .slide__item:nth-of-type(5) {
+      animation: animateText 1.4s ease-in forwards;
+      color: $white-color;
     }
 
-    .prev:active,
-    .next:active,
-    .prev:hover,
-    .next:hover {
-      transform: scale(1.2);
-      color: $primary-color;
+    .slide__button--translate {
+      animation: animateText 1.7s ease-in forwards;
+    }
+
+    @keyframes animateText {
+      0% {
+        transform: translateX(800px);
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
   }
 }
@@ -753,14 +1209,6 @@ $slideWidthXsmallSmartphones: 250px;
 // Ropa Section
 // ===================================
 .section {
-  &__ropa {
-    margin-top: 550px;
-
-    @include for-smartphones {
-      margin-top: 450px;
-    }
-  }
-
   &__body {
     .filter {
       &__container {
