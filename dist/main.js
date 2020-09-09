@@ -43,9 +43,9 @@ function smoothScrolling(e) {
 // =======================================
 
 // Reload window when resizing
-window.onresize = function () {
-  location.reload();
-};
+// window.onresize = function () {
+//   location.reload();
+// };
 
 const sliderItems = document.querySelector('.slider__items'),
   prev = document.querySelector('.prev'),

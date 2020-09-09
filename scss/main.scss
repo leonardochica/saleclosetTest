@@ -1179,6 +1179,12 @@ $slideWidthXsmallSmartphones: 250px;
             &__label {
               font-size: 1rem;
               font-family: $special-font-family;
+
+              &__checkbox {
+                font-size: 0.8rem;
+                font-family: $special-font-family;
+                cursor: pointer;
+              }
             }
 
             &__message {
@@ -1198,6 +1204,28 @@ $slideWidthXsmallSmartphones: 250px;
 
               &--error {
                 border: 2px solid $primary-color;
+              }
+            }
+
+            &__checkbox {
+              position: relative;
+              outline: none;
+              appearance: none;
+              -moz-appearance: none;
+              -webkit-appearance: none;
+              width: 17px;
+              height: 17px;
+              border: 2px solid $primary-color;
+              cursor: pointer;
+
+              &::before {
+                content: '\2713';
+                position: absolute;
+                font-size: 0.8rem;
+                top: -0.2rem;
+                left: 0.1rem;
+                width: 100%;
+                height: 100%;
               }
             }
           }
