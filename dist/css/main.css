@@ -396,9 +396,6 @@ body {
       transition: all 0.3s ease-out; }
   .main-header .social__icon {
     font-size: 1.8rem; }
-    @media (max-width: 750px) {
-      .main-header .social__icon {
-        font-size: 1.4rem; } }
   @media (max-width: 750px) {
     .main-header .social {
       display: flex;
@@ -1262,10 +1259,10 @@ body {
 .whatsapp {
   position: fixed;
   bottom: 6rem;
-  right: 0.5rem;
+  right: 0.8rem;
   z-index: 20; }
   .whatsapp__link:hover .whatsapp__icon {
     color: #9e256c; }
   .whatsapp__icon {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: #d23d95; }

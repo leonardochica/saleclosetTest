@@ -199,10 +199,6 @@ body {
 
     &__icon {
       font-size: 1.8rem;
-
-      @include for-tablet-portrait-down {
-        font-size: 1.4rem;
-      }
     }
 
     @include for-tablet-portrait-down {
@@ -1453,7 +1449,7 @@ $slideHeightSmartphones: 380px;
 .whatsapp {
   position: fixed;
   bottom: 6rem;
-  right: 0.5rem;
+  right: 0.8rem;
   z-index: 20;
 
   &__link {
@@ -1465,7 +1461,7 @@ $slideHeightSmartphones: 380px;
   }
 
   &__icon {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: $primary-color;
   }
 }
