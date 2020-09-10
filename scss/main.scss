@@ -1445,6 +1445,6 @@ $slideHeightSmartphones: 380px;
   }
 }
 
-.fb_dialog.fb_dialog_advanced {
-  left: 18pt !important;
+iframe[data-testid='bubble_iframe'] {
+  width: 120px;
 }
