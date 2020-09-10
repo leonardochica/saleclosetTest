@@ -1255,3 +1255,6 @@ body {
 
 .section .thankyou__link {
   margin-top: 2rem; }
+
+.fb_dialog_content iframe {
+  bottom: 120px !important; }
