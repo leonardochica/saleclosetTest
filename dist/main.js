@@ -436,7 +436,7 @@ function sliderLoading() {
 
 setTimeout(() => {
   sliderLoading();
-}, 100);
+}, 10);
 
 // Contact Form Validation
 const inputName = document.getElementById('input__name');
