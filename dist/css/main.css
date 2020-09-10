@@ -269,7 +269,7 @@ body {
 
 .scrollToTop {
   position: fixed;
-  right: 2rem;
+  left: 2rem;
   bottom: 2rem;
   z-index: 2;
   width: 40px;
@@ -1257,4 +1257,4 @@ body {
   margin-top: 2rem; }
 
 .fb_dialog_content iframe {
-  right: 5px !important; }
+  right: 3px !important; }

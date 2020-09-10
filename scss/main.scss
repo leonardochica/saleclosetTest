@@ -17,7 +17,7 @@ body {
 
 .scrollToTop {
   position: fixed;
-  right: 2rem;
+  left: 2rem;
   bottom: 2rem;
   z-index: 2;
   width: 40px;
@@ -1447,5 +1447,5 @@ $slideHeightSmartphones: 380px;
 
 .fb_dialog_content iframe {
   // bottom: 120px !important;
-  right: 5px !important;
+  right: 3px !important;
 }
