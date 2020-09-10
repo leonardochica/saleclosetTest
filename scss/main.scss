@@ -1429,4 +1429,18 @@ $slideHeightSmartphones: 380px;
   &__message {
     margin-top: 2rem;
   }
+
+  .thankyou {
+    &__title {
+      margin-bottom: 1rem;
+    }
+
+    &__text {
+      margin: 0.5rem 0 0;
+    }
+
+    &__link {
+      margin-top: 2rem;
+    }
+  }
 }

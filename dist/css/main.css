@@ -45,6 +45,16 @@ ul {
   .link--dark:hover {
     color: #d23d95; }
 
+.link--primary {
+  color: #d23d95; }
+  .link--primary:hover {
+    color: #9e256c; }
+
+.link--secondary {
+  color: #9e256c; }
+  .link--secondary:hover {
+    color: #d23d95; }
+
 .link--light {
   color: #fff; }
   .link--light:hover {
@@ -1235,4 +1245,13 @@ body {
     font-size: 0.7rem; }
 
 .section__message {
+  margin-top: 2rem; }
+
+.section .thankyou__title {
+  margin-bottom: 1rem; }
+
+.section .thankyou__text {
+  margin: 0.5rem 0 0; }
+
+.section .thankyou__link {
   margin-top: 2rem; }

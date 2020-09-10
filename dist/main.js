@@ -533,15 +533,7 @@ function SubmitForm(e) {
 
   if (!valName || !valEmail || !valMessage || !valCheckbox) {
     e.preventDefault();
-  } else {
-    thankyouMessage();
   }
-}
-
-function thankyouMessage() {
-  const thankyouTitle = document.querySelector('.thankyou__title');
-
-  thankyouTitle.textContent = inputName.value;
 }
 
 // Scroll to Top

@@ -120,135 +120,6 @@
       </div>
     </div>
 
-    <!-- Showcase Section -->
-    <!-- <section class="showcase">
-      <div class="showcase__container">
-        <div class="slider">
-          <div class="slider__wrapper">
-            <div class="slider__items">
-              <div class="slide">
-                <div class="carousel">
-                  <span class="carousel__item"
-                    ><img
-                      src="images/productos/Carousel/image1.jpg"
-                      alt=""
-                      class="carousel__image"
-                  /></span>
-                  <span class="carousel__item"
-                    ><img
-                      src="images/productos/Carousel/image2.jpg"
-                      alt=""
-                      class="carousel__image"
-                  /></span>
-                  <span class="carousel__item"
-                    ><img
-                      src="images/productos/Carousel/image3.jpg"
-                      alt=""
-                      class="carousel__image"
-                  /></span>
-                  <span class="carousel__item"
-                    ><img
-                      src="images/productos/Carousel/image4.jpg"
-                      alt=""
-                      class="carousel__image"
-                  /></span>
-                  <span class="carousel__item"
-                    ><img
-                      src="images/productos/Carousel/image5.jpg"
-                      alt=""
-                      class="carousel__image"
-                  /></span>
-                  <span class="carousel__item"
-                    ><img
-                      src="images/productos/Carousel/image6.jpg"
-                      alt=""
-                      class="carousel__image"
-                  /></span>
-                  <span class="carousel__item"
-                    ><img
-                      src="images/productos/Carousel/image7.jpg"
-                      alt=""
-                      class="carousel__image"
-                  /></span>
-                  <span class="carousel__item"
-                    ><img
-                      src="images/productos/Carousel/image8.jpg"
-                      alt=""
-                      class="carousel__image"
-                  /></span>
-                  <span class="carousel__item"
-                    ><img
-                      src="images/productos/Carousel/image9.jpg"
-                      alt=""
-                      class="carousel__image"
-                  /></span>
-                </div>
-                <p class="slide__title carousel__title">
-                  Ropa Nueva y Ropa Usada en Perfecto Estado
-                </p>
-                <a href="#" class="slide__button btn--primary"
-                  >Nuevos Especiales</a
-                >
-              </div>
-              <div class="slide">
-                <div class="slide__container">
-                  <ul class="slide__list">
-                    <li class="slide__item">Vestidos</li>
-                    <li class="slide__item">Blusas y Camisas</li>
-                    <li class="slide__item">Pantalones y Leggings</li>
-                    <li class="slide__item">Chaquetas</li>
-                    <li class="slide__item">Zapatos</li>
-                  </ul>
-                  <a
-                    href="#ropa"
-                    class="slide__button btn--primary section__scrolling"
-                    >Compra</a
-                  >
-                </div>
-                <div class="slide__overlay">
-                  <img
-                    src="images/showcase/image1.jpg"
-                    alt=""
-                    class="slide__background"
-                  />
-                </div>
-              </div>
-              <div class="slide">
-                <img
-                  src="images/showcase/image2.png"
-                  alt="Laptop Image with Shopping Store"
-                  class="slide__image"
-                />
-                <p class="slide__title">
-                  Tienda Online - 24 Horas al Día
-                </p>
-                <a
-                  href="#contacto"
-                  class="slide__button btn--primary section__scrolling"
-                  >Contáctanos</a
-                >
-              </div>
-              <div class="slide">
-                <img
-                  src="images/showcase/image3.png"
-                  alt="Mapa de Colombia"
-                  class="slide__map"
-                />
-                <p class="slide__title">
-                  Distribución y Venta a Toda Colombia
-                </p>
-              </div>
-            </div>
-          </div>
-          <a class="prev control"><i class="fas fa-chevron-circle-left"></i></a>
-          <a class="next control"
-            ><i class="fas fa-chevron-circle-right"></i
-          ></a>
-        </div>
-        <div class="showcase__background"></div>
-      </div>
-    </section> -->
-
     <!-- Showcase Section using slider -->
     <section class="showcase">
       <div class="showcase__container">
@@ -830,6 +701,37 @@
         &copy; Sale Closet 2020. Todos los derechos reservados.
       </p>
     </div>
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: 'v8.0',
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, 'script', 'facebook-jssdk');
+    </script>
+
+    <!-- Your Chat Plugin code -->
+    <div
+      class="fb-customerchat"
+      attribution="setup_tool"
+      page_id="110310474126580"
+      theme_color="#d23d95"
+      logged_in_greeting="Bienvenido(a) a Sale Closet! ¿Cómo podemos ayudarte?"
+      logged_out_greeting="Bienvenido(a) a Sale Closet! ¿Cómo podemos ayudarte?"
+    ></div>
 
     <script id="splide-script" src="splide/splide.min.js"></script>
     <script src="main.js"></script>
