@@ -286,9 +286,9 @@ body {
   transition: all 0.3s ease-out; }
   @media (max-width: 500px) {
     .scrollToTop {
-      right: 1.2rem;
-      width: 25px;
-      height: 25px; } }
+      left: 1rem;
+      width: 35px;
+      height: 35px; } }
   .scrollToTop--visible {
     visibility: visible;
     opacity: 1; }
@@ -1257,4 +1257,4 @@ body {
   margin-top: 2rem; }
 
 .fb_dialog_content iframe {
-  right: 3px !important; }
+  right: 1px !important; }

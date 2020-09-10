@@ -34,9 +34,9 @@ body {
   @include easeout;
 
   @include for-smartphones {
-    right: 1.2rem;
-    width: 25px;
-    height: 25px;
+    left: 1rem;
+    width: 35px;
+    height: 35px;
   }
 
   &--visible {
@@ -1447,5 +1447,5 @@ $slideHeightSmartphones: 380px;
 
 .fb_dialog_content iframe {
   // bottom: 120px !important;
-  right: 3px !important;
+  right: 1px !important;
 }
