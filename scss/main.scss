@@ -1445,7 +1445,27 @@ $slideHeightSmartphones: 380px;
   }
 }
 
+// Chats
 .fb_dialog_content iframe {
-  // bottom: 120px !important;
   right: 0 !important;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 6rem;
+  right: 0.5rem;
+  z-index: 20;
+
+  &__link {
+    &:hover {
+      .whatsapp__icon {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 3rem;
+    color: $primary-color;
+  }
 }

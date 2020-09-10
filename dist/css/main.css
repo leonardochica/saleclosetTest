@@ -1258,3 +1258,14 @@ body {
 
 .fb_dialog_content iframe {
   right: 0 !important; }
+
+.whatsapp {
+  position: fixed;
+  bottom: 6rem;
+  right: 0.5rem;
+  z-index: 20; }
+  .whatsapp__link:hover .whatsapp__icon {
+    color: #9e256c; }
+  .whatsapp__icon {
+    font-size: 3rem;
+    color: #d23d95; }
