@@ -1308,6 +1308,13 @@ $slideHeightSmartphones: 380px;
     }
   }
 
+  &__list__item {
+    list-style-type: '\2714';
+    margin-left: 1rem;
+    padding-left: 0.5rem;
+    font-family: $special-font-family;
+  }
+
   &__item {
     margin-bottom: 1rem;
     font-size: 1.1rem;
@@ -1414,5 +1421,12 @@ $slideHeightSmartphones: 380px;
   &__text {
     text-align: center;
     font-size: 0.7rem;
+  }
+}
+
+// Message page
+.section {
+  &__message {
+    margin-top: 2rem;
   }
 }

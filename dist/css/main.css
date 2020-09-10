@@ -1157,6 +1157,11 @@ body {
     @media (max-width: 1000px) {
       .footer__text {
         font-size: 0.9rem; } }
+  .footer__list__item {
+    list-style-type: '\2714';
+    margin-left: 1rem;
+    padding-left: 0.5rem;
+    font-family: "Signika", sans-serif; }
   .footer__item {
     margin-bottom: 1rem;
     font-size: 1.1rem; }
@@ -1228,3 +1233,6 @@ body {
   .copyright__text {
     text-align: center;
     font-size: 0.7rem; }
+
+.section__message {
+  margin-top: 2rem; }
