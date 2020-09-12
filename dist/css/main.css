@@ -1253,6 +1253,13 @@ body {
 .section .thankyou__link {
   margin-top: 2rem; }
 
+.fb_dialog {
+  z-index: 20 !important; }
+
+.fb_dialog_content iframe {
+  right: 0 !important;
+  z-index: 20 !important; }
+
 .whatsapp {
   position: fixed;
   bottom: 6rem;
