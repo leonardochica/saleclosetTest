@@ -125,6 +125,50 @@ ul {
     @media (max-width: 500px) {
       .section__title {
         font-size: 2rem; } }
+    .section__title--special {
+      position: relative;
+      overflow: hidden;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 5rem;
+      text-align: center;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #54183b, #9e256c, #d23d95);
+      background-repeat: no-repeat;
+      background-size: 90%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: rgba(255, 255, 255, 0);
+      animation: textAnimation 3s linear infinite; }
+      @media (max-width: 750px) {
+        .section__title--special {
+          font-size: 4rem;
+          animation: textAnimationSmallDevices 3s linear infinite; } }
+      @media (max-width: 500px) {
+        .section__title--special {
+          font-size: 3rem; } }
+
+@keyframes textAnimation {
+  0% {
+    background-position: -700%; }
+  100% {
+    background-position: 700%; } }
+
+@keyframes textAnimationSmallDevices {
+  0% {
+    background-position: -800%; }
+  100% {
+    background-position: 800%; } }
+  .section__subheading {
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem; }
+    @media (max-width: 750px) {
+      .section__subheading {
+        font-size: 1.3rem; } }
+    @media (max-width: 500px) {
+      .section__subheading {
+        font-size: 1.1rem; } }
   .section__body {
     margin: 2rem 0; }
 
@@ -148,7 +192,11 @@ ul {
     max-width: 285px;
     border: 2px solid #d23d95;
     box-shadow: 3px 3px 5px #54183b;
-    margin: 0 auto; }
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative; }
     @media (max-width: 1000px) {
       .products-wrapper .card {
         max-width: 275px; } }
@@ -180,13 +228,31 @@ ul {
     .products-wrapper .card__bottom {
       padding: 0.5rem;
       font-family: "Signika", sans-serif;
-      background: #fbedf5; }
+      background: #fbedf5;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
     .products-wrapper .card__title {
       font-family: "Josefin Sans", sans-serif;
       color: #54183b; }
     .products-wrapper .card__price {
       color: #d23d95;
       font-size: 1.1rem; }
+    .products-wrapper .card__description {
+      display: flex;
+      align-items: flex-end; }
+      .products-wrapper .card__description__text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .products-wrapper .card__description__expand {
+        white-space: normal; }
+      .products-wrapper .card__description__link {
+        font-size: 0.8rem;
+        white-space: nowrap;
+        cursor: pointer;
+        padding-bottom: 0.15rem; }
     .products-wrapper .card__text {
       display: flex;
       justify-content: space-between; }
@@ -234,6 +300,19 @@ ul {
         margin-right: 0.5rem; }
       .products-wrapper .card__contact__icon {
         pointer-events: none; }
+    .products-wrapper .card__offer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0.3rem;
+      width: 150px;
+      font-size: 0.9rem;
+      letter-spacing: 1.5px;
+      color: #fff;
+      background: #d23d95;
+      transform: translate(-2.5rem, 1.2rem) rotate(-45deg);
+      text-align: center;
+      text-transform: uppercase; }
 
 .splide__arrow {
   background: #ecafd2;
@@ -405,7 +484,7 @@ body {
   padding: 0.2rem;
   background: #d23d95;
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-top: 5.9rem; }
   .ticker .container {
     display: flex;
@@ -414,14 +493,13 @@ body {
       .ticker .container {
         flex-direction: column;
         text-align: center; } }
+  .ticker__item {
+    font-size: 1rem; }
   .ticker__contact .ticker__item {
     margin: 0 1rem; }
     @media (max-width: 750px) {
       .ticker__contact .ticker__item {
         margin: 0 0.5rem; } }
-  @media (max-width: 500px) {
-    .ticker {
-      font-size: 0.8rem; } }
 
 @media (max-width: 750px) {
   .overlay {
@@ -659,7 +737,7 @@ body {
   @media (max-width: 500px) {
     .showcase .slide__title {
       text-transform: initial;
-      font-size: 1rem; } }
+      font-size: 0.9rem; } }
 
 .showcase .slide__button {
   padding: 0.7rem 2rem;
@@ -762,6 +840,22 @@ body {
   100% {
     transform: translateX(0);
     opacity: 1; } }
+
+.section__ofertas {
+  background: url("../images/background10.jpg");
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3rem 0;
+  position: relative; }
+  .section__ofertas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); }
 
 .section__body .filter__container {
   position: relative;
@@ -989,7 +1083,7 @@ body {
     display: flex;
     align-items: center;
     margin: 1rem;
-    width: 250px; }
+    width: 300px; }
     @media (max-width: 750px) {
       .section__contact .contact__item {
         margin: 0.3rem; } }

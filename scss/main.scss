@@ -213,7 +213,7 @@ body {
   padding: 0.2rem;
   background: $primary-color;
   color: $white-color;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-top: 5.9rem;
 
   .container {
@@ -226,6 +226,10 @@ body {
     }
   }
 
+  &__item {
+    font-size: 1rem;
+  }
+
   &__contact {
     .ticker__item {
       margin: 0 1rem;
@@ -234,10 +238,6 @@ body {
         margin: 0 0.5rem;
       }
     }
-  }
-
-  @include for-smartphones {
-    font-size: 0.8rem;
   }
 }
 
@@ -584,7 +584,7 @@ $slideHeightSmartphones: 380px;
 
       @include for-smartphones {
         text-transform: initial;
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
     }
 
@@ -711,6 +711,28 @@ $slideHeightSmartphones: 380px;
         transform: translateX(0);
         opacity: 1;
       }
+    }
+  }
+}
+
+// Ofertas Section
+.section {
+  &__ofertas {
+    background: url('../images/background10.jpg');
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 3rem 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($color: #000000, $alpha: 0.1);
     }
   }
 }
@@ -1037,7 +1059,7 @@ $slideHeightSmartphones: 380px;
       display: flex;
       align-items: center;
       margin: 1rem;
-      width: 250px;
+      width: 300px;
 
       @include for-tablet-portrait-down {
         margin: 0.3rem;

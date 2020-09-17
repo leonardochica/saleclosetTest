@@ -188,6 +188,69 @@ ul {
     @include for-smartphones {
       font-size: 2rem;
     }
+
+    &--special {
+      position: relative;
+      overflow: hidden;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 5rem;
+      text-align: center;
+      text-transform: uppercase;
+      background: linear-gradient(
+        90deg,
+        $dark-color,
+        $secondary-color,
+        $primary-color
+      );
+      background-repeat: no-repeat;
+      background-size: 90%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: rgba(255, 255, 255, 0);
+      animation: textAnimation 3s linear infinite;
+
+      @include for-tablet-portrait-down {
+        font-size: 4rem;
+        animation: textAnimationSmallDevices 3s linear infinite;
+      }
+
+      @include for-smartphones {
+        font-size: 3rem;
+      }
+    }
+
+    @keyframes textAnimation {
+      0% {
+        background-position: -700%;
+      }
+      100% {
+        background-position: 700%;
+      }
+    }
+
+    @keyframes textAnimationSmallDevices {
+      0% {
+        background-position: -800%;
+      }
+      100% {
+        background-position: 800%;
+      }
+    }
+  }
+
+  &__subheading {
+    text-align: center;
+    text-transform: uppercase;
+    color: $white-color;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+
+    @include for-tablet-portrait-down {
+      font-size: 1.3rem;
+    }
+
+    @include for-smartphones {
+      font-size: 1.1rem;
+    }
   }
 
   &__body {
@@ -253,6 +316,10 @@ $cardWidthXsmallSmartphones: 250px;
     border: 2px solid $primary-color;
     box-shadow: 3px 3px 5px $dark-color;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
 
     @include for-tablet-landscape-down {
       max-width: $cardWidthTabletLandscape;
@@ -296,6 +363,10 @@ $cardWidthXsmallSmartphones: 250px;
       padding: 0.5rem;
       font-family: $special-font-family;
       background: lighten($color: $light-color, $amount: 5);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     &__title {
@@ -306,6 +377,28 @@ $cardWidthXsmallSmartphones: 250px;
     &__price {
       color: $primary-color;
       font-size: 1.1rem;
+    }
+
+    &__description {
+      display: flex;
+      align-items: flex-end;
+
+      &__text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &__expand {
+        white-space: normal;
+      }
+
+      &__link {
+        font-size: 0.8rem;
+        white-space: nowrap;
+        cursor: pointer;
+        padding-bottom: 0.15rem;
+      }
     }
 
     &__text {
@@ -379,6 +472,21 @@ $cardWidthXsmallSmartphones: 250px;
       &__icon {
         pointer-events: none;
       }
+    }
+
+    &__offer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0.3rem;
+      width: 150px;
+      font-size: 0.9rem;
+      letter-spacing: 1.5px;
+      color: $white-color;
+      background: $primary-color;
+      transform: translate(-2.5rem, 1.2rem) rotate(-45deg);
+      text-align: center;
+      text-transform: uppercase;
     }
   }
 }

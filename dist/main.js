@@ -85,7 +85,10 @@ goSecondTab.addEventListener('click', () => {
 const ropaArray = [
   {
     category: 'ropaNueva',
+    offer: 'no',
     item: 'Vestido Salida Playera',
+    description:
+      'Color Rosado largo para salida a playa solo fue usado una vez. En perfecto estado',
     price: '$30.000',
     brand: 'Varias Marcas',
     size: 'M',
@@ -93,7 +96,9 @@ const ropaArray = [
   },
   {
     category: 'ropaNueva',
+    offer: 'no',
     item: 'Blusa Azul Marino',
+    description: 'Color Azul Marino largo medio tonoss',
     price: '$20.000',
     brand: 'Forever 21',
     size: 'M',
@@ -101,7 +106,9 @@ const ropaArray = [
   },
   {
     category: 'ropaNueva',
+    offer: 'no',
     item: 'Top Pantera Rosa',
+    description: '',
     price: '$15.000',
     brand: 'People',
     size: 'S',
@@ -112,7 +119,10 @@ const ropaArray = [
 const ropaSegundaArray = [
   {
     category: 'ropaSegunda',
+    offer: 'yes',
     item: 'Blusa Estraple',
+    description:
+      'Color Rosado largo para salida a playa solo fue usado una vez. En perfecto estado',
     price: '$22.500',
     brand: 'Varias Marcas',
     size: 'Única',
@@ -120,7 +130,10 @@ const ropaSegundaArray = [
   },
   {
     category: 'ropaSegunda',
+    offer: 'no',
     item: 'Blusa Pantera',
+    description:
+      'Color Rosado largo para salida a playa solo fue usado una vez. En perfecto',
     price: '$25.000',
     brand: 'People',
     size: 'Única',
@@ -128,7 +141,10 @@ const ropaSegundaArray = [
   },
   {
     category: 'ropaSegunda',
+    offer: 'no',
     item: 'Enterizo Pantalón ',
+    description:
+      'Color Rosado largo para salida a playa solo fue usado una vez. En perfecto estado',
     price: '$50.000',
     brand: 'Varias Marcas',
     size: 'L',
@@ -136,7 +152,10 @@ const ropaSegundaArray = [
   },
   {
     category: 'ropaSegunda',
+    offer: 'yes',
     item: 'Leggings Terciopelo',
+    description:
+      'Color Rosado largo para salida a playa solo fue usado una vez. En perfecto estado',
     price: '$25.000',
     brand: 'Varias Marcas',
     size: 'Única',
@@ -144,7 +163,10 @@ const ropaSegundaArray = [
   },
   {
     category: 'ropaSegunda',
+    offer: 'no',
     item: 'Vestido Dorado',
+    description:
+      'Color Rosado largo para salida a playa solo fue usado una vez. En perfecto estado',
     price: '$40.000',
     brand: 'Varias Marcas',
     size: 'M',
@@ -152,7 +174,10 @@ const ropaSegundaArray = [
   },
   {
     category: 'ropaSegunda',
+    offer: 'no',
     item: 'Vestido Velo',
+    description:
+      'Color Rosado largo para salida a playa solo fue usado una vez. En perfecto estado',
     price: '$38.500',
     brand: 'Varias Marcas',
     size: 'L',
@@ -163,7 +188,10 @@ const ropaSegundaArray = [
 const zapatosArray = [
   {
     category: 'zapatos',
+    offer: 'no',
     item: 'Tacones Negros',
+    description:
+      'Color Rosado largo para salida a playa solo fue usado una vez. En perfecto estado',
     price: '$25.000',
     brand: 'Varias Marcas',
     size: '34',
@@ -171,7 +199,10 @@ const zapatosArray = [
   },
   {
     category: 'zapatos',
+    offer: 'no',
     item: 'Tacones Rosados',
+    description:
+      'Color Rosado largo para salida a playa solo fue usado una vez. En perfecto estado',
     price: '$35.000',
     brand: 'People',
     size: '32',
@@ -179,7 +210,10 @@ const zapatosArray = [
   },
   {
     category: 'zapatos',
+    offer: 'no',
     item: 'Tenis Rosa',
+    description:
+      'Color Rosado largo para salida a playa solo fue usado una vez. En perfecto estado',
     price: '$60.000',
     brand: 'Nike',
     size: '30',
@@ -187,7 +221,10 @@ const zapatosArray = [
   },
   {
     category: 'zapatos',
+    offer: 'yes',
     item: 'Botas Negras',
+    description:
+      'Color Rosado largo para salida a playa solo fue usado una vez. En perfecto estado',
     price: '$75.000',
     brand: 'Varias Marcas',
     size: '28',
@@ -195,7 +232,10 @@ const zapatosArray = [
   },
   {
     category: 'zapatos',
+    offer: 'no',
     item: 'Tacones Dorados',
+    description:
+      'Color Rosado largo para salida a playa solo fue usado una vez. En perfecto estado',
     price: '$49.000',
     brand: 'Varias Marcas',
     size: '32',
@@ -203,7 +243,10 @@ const zapatosArray = [
   },
   {
     category: 'zapatos',
+    offer: 'no',
     item: 'Zapatos Multicolor',
+    description:
+      'Color Rosado largo para salida a playa solo fue usado una vez. En perfecto estado',
     price: '$70.000',
     brand: 'Adidas',
     size: '30',
@@ -214,7 +257,10 @@ const zapatosArray = [
 const accessoriosArray = [
   {
     category: 'accessorios',
+    offer: 'no',
     item: 'Mochila Negra Mickey',
+    description:
+      'Color Rosado largo para salida a playa solo fue usado una vez. En perfecto estado',
     price: '$45.000',
     brand: 'Disney',
     size: 'Única',
@@ -222,7 +268,10 @@ const accessoriosArray = [
   },
   {
     category: 'accessorios',
+    offer: 'no',
     item: 'Mochila Amarilla Caterpillar',
+    description:
+      'Color Rosado largo para salida a playa solo fue usado una vez. En perfecto estado',
     price: '$35.000',
     brand: 'Caterpillar',
     size: 'Única',
@@ -230,13 +279,18 @@ const accessoriosArray = [
   },
   {
     category: 'accessorios',
+    offer: 'no',
     item: 'Mochila Negra Mickey',
+    description:
+      'Color Rosado largo para salida a playa solo fue usado una vez. En perfecto estado',
     price: '$60.000',
     brand: 'Disney',
     size: 'Única',
     numberImages: 3,
   },
 ];
+
+const offerArray = [];
 
 const productsArrays = [
   ropaArray,
@@ -245,10 +299,28 @@ const productsArrays = [
   accessoriosArray,
 ];
 
+productsArrays.forEach((productArray) => {
+  productArray.forEach((productItem) => {
+    let cloneItem = Object.assign({}, productItem);
+
+    if (cloneItem.offer === 'yes') {
+      offerArray.push(cloneItem);
+    }
+  });
+});
+
+offerArray.forEach((offerProduct) => {
+  offerProduct.category = 'ofertas';
+});
+
+productsArrays.unshift(offerArray);
+
 class Card {
-  constructor(category, item, price, brand, size, images) {
+  constructor(category, offer, item, description, price, brand, size, images) {
     this.category = category;
+    this.offer = offer;
     this.item = item;
+    this.description = description;
     this.price = price;
     this.brand = brand;
     this.size = size;
@@ -267,6 +339,7 @@ class UI {
 
     cardElement.className = 'card';
 
+    // Card Images
     let listImages = '';
 
     for (let i = 1; i <= card.images; i++) {
@@ -288,40 +361,57 @@ class UI {
       </li>`;
     }
 
+    // Card Description
+    let cardDescription = '';
+    if (card.description.length > 36) {
+      cardDescription = `
+      <p class="card__description__text">${card.description}</p>
+      <a        
+      class="card__description__link link--primary">[Leer más]</a>
+      `;
+    } else {
+      cardDescription = `
+      <p class="card__description__text">${card.description}</p>      
+      `;
+    }
+
+    // Card Offer
+    let cardOffer = '';
+    if (card.offer === 'yes') {
+      cardOffer = `
+      <p class="card__offer">Oferta</p> 
+      `;
+    }
+
     cardElement.innerHTML = `
     <div class="card__top">
-    <div class="splide">
-      <div class="splide__arrows">
-        <button class="splide__arrow splide__arrow--prev">
-          <i class="fas fa-arrow-left"></i>
-        </button>
-        <button class="splide__arrow splide__arrow--next">
-          <i class="fas fa-arrow-right"></i>
-        </button>
-      </div>
-      <div class="splide__track">
-        <ul class="splide__list">
-          ${listImages}
-        </ul>
+      <div class="splide">
+        <div class="splide__arrows">
+          <button class="splide__arrow splide__arrow--prev">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <button class="splide__arrow splide__arrow--next">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="splide__track">
+          <ul class="splide__list">
+            ${listImages}
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="card__bottom">
+    <div class="card__bottom">   
     <h3 class="card__title">${card.item}</h3>
+    <div class="card__description">
+      ${cardDescription}
+    </div>
     <p class="card__price">${card.price}</p>
     <div class="card__text">
       <p class="card__brand">${card.brand}</p>
       <p class="card__size">Talla: ${card.size}</p>
     </div>
-    <div class="card__contact">
-      <a
-        href="tel:+573163190569"
-        title="Teléfono"
-        target="_blank"
-        class="card__contact__link button--phone btn--primary"
-      > 
-        <i class="fas fa-phone"></i>
-      </a>
+    <div class="card__contact">      
       <a
         href="#"
         title="Email"
@@ -342,7 +432,7 @@ class UI {
         Comprar
       </a>
       <a
-        href="https://m.me/110310474126580"
+        href="https://m.me/111735730171780"
         target="_blank"
         class="card__button button--messenger btn--primary"
         title="Facebook Messenger"
@@ -352,18 +442,35 @@ class UI {
       </a>
       </div>
     </div>
+    ${cardOffer}
     `;
 
     cardContainer.appendChild(cardElement);
   }
 
+  expandDescription(target) {
+    let itemDescription = target.parentElement.children[0];
+
+    itemDescription.classList.add('card__description__expand');
+
+    target.textContent = '[Leer menos]';
+  }
+
+  contractDescription(target) {
+    let itemDescription = target.parentElement.children[0];
+
+    itemDescription.classList.remove('card__description__expand');
+
+    target.textContent = '[Leer más]';
+  }
+
   sendToWhatsapp(target) {
     let itemTitle = target.parentElement.parentElement.children[0].textContent;
 
-    let itemPrice = target.parentElement.parentElement.children[1].textContent;
+    let itemPrice = target.parentElement.parentElement.children[2].textContent;
 
     let itemSize =
-      target.parentElement.parentElement.children[2].children[1].textContent;
+      target.parentElement.parentElement.children[3].children[1].textContent;
 
     target.setAttribute(
       'href',
@@ -374,14 +481,14 @@ class UI {
   sendToEmail(target) {
     let itemTitle = target.parentElement.parentElement.children[0].textContent;
 
-    let itemPrice = target.parentElement.parentElement.children[1].textContent;
+    let itemPrice = target.parentElement.parentElement.children[2].textContent;
 
     let itemSize =
-      target.parentElement.parentElement.children[2].children[1].textContent;
+      target.parentElement.parentElement.children[3].children[1].textContent;
 
     target.setAttribute(
       'href',
-      `mailto:salecloseth@gmail.com?subject=Sale Closet: ${itemTitle} ${itemSize}, ${itemPrice}&body=Cordial Saludo, %0D%0A%0D%0AEstoy interesado(a) en ${itemTitle} ${itemSize}, con un costo de ${itemPrice}. %0D%0A%0D%0AMuchas Gracias`
+      `mailto:saleclosetonline@gmail.com?subject=Sale Closet: ${itemTitle} ${itemSize}, ${itemPrice}&body=Cordial Saludo, %0D%0A%0D%0AEstoy interesado(a) en ${itemTitle} ${itemSize}, con un costo de ${itemPrice}. %0D%0A%0D%0AMuchas Gracias`
     );
   }
 }
@@ -391,7 +498,9 @@ document.addEventListener('DOMContentLoaded', function (e) {
     productArray.forEach((arrayItem, index) => {
       const card = new Card(
         arrayItem.category,
+        arrayItem.offer,
         arrayItem.item,
+        arrayItem.description,
         arrayItem.price,
         arrayItem.brand,
         arrayItem.size,
@@ -404,17 +513,26 @@ document.addEventListener('DOMContentLoaded', function (e) {
   );
 });
 
-// Whatsapp Button to Buy Item (Card)
+// Click Events in card
 const productWrappers = document.querySelectorAll('.products-wrapper');
 
 productWrappers.forEach((productWrapper) =>
   productWrapper.addEventListener('click', function (e) {
     const ui = new UI();
 
+    // Expand description
+    if (e.target.textContent === '[Leer más]') {
+      ui.expandDescription(e.target);
+    } else if (e.target.textContent === '[Leer menos]') {
+      ui.contractDescription(e.target);
+    }
+
+    // Whatsapp
     if (e.target.className === 'card__button button--whatsapp btn--primary') {
       ui.sendToWhatsapp(e.target);
     }
 
+    // Email
     if (
       e.target.className === 'card__contact__link button--email btn--primary'
     ) {
@@ -590,6 +708,8 @@ const footerShorts = document.querySelector('.footer__shorts');
 
 const footerPantalones = document.querySelector('.footer__pantalones');
 
+const footerLeggings = document.querySelector('.footer__leggings');
+
 function TabandFilter(item) {
   tabs[0].click();
   filter.value = item;
@@ -614,4 +734,8 @@ footerShorts.addEventListener('click', () => {
 
 footerPantalones.addEventListener('click', () => {
   TabandFilter('pantalón');
+});
+
+footerLeggings.addEventListener('click', () => {
+  TabandFilter('leggings');
 });
