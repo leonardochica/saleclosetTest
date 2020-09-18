@@ -853,8 +853,8 @@ body {
     .section__ofertas {
       background: url("../images/backgroundofertasSmall.jpg");
       background-size: contain;
-      background-attachment: fixed;
-      background-position: top; } }
+      background-attachment: local;
+      background-position: bottom; } }
   .section__ofertas::before {
     content: '';
     position: absolute;
@@ -956,6 +956,10 @@ body {
   margin-bottom: 0;
   padding: 1rem 0;
   position: relative; }
+  @media (max-width: 500px) {
+    .section__services {
+      background-attachment: local;
+      background-position: top right; } }
   .section__services::before {
     content: '';
     position: absolute;
@@ -1037,6 +1041,11 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed; }
+  @media (max-width: 500px) {
+    .section__contact {
+      background-attachment: local;
+      background-position: center;
+      background-size: cover; } }
   .section__contact::before {
     content: '';
     position: absolute;
