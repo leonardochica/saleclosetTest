@@ -728,7 +728,7 @@ $slideHeightSmartphones: 380px;
 
     @include for-smartphones {
       background: url('../images/background.jpg');
-      background-size: cover;
+      background-size: contain;
       background-attachment: fixed;
       background-position: top;
     }
