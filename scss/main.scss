@@ -720,16 +720,17 @@ $slideHeightSmartphones: 380px;
 .section {
   &__ofertas {
     background: url('../images/backgroundofertas.jpg');
-    background-position: center;
+    background-position: top;
     background-size: cover;
     background-attachment: fixed;
     padding: 3rem 0;
     position: relative;
 
     @include for-smartphones {
-      background: url('../images/backgroundofertasSmall.jpg');
+      background: url('../images/background.jpg');
       background-size: cover;
       background-attachment: fixed;
+      background-position: top;
     }
 
     &::before {
