@@ -236,6 +236,7 @@ body {
 
       @include for-tablet-portrait-down {
         margin: 0 0.5rem;
+        font-size: 0.9rem;
       }
     }
   }
@@ -718,12 +719,18 @@ $slideHeightSmartphones: 380px;
 // Ofertas Section
 .section {
   &__ofertas {
-    background: url('../images/background10.jpg');
-    background-position: top;
+    background: url('../images/backgroundofertas.jpg');
+    background-position: center;
     background-size: cover;
     background-attachment: fixed;
     padding: 3rem 0;
     position: relative;
+
+    @include for-smartphones {
+      background: url('../images/backgroundofertasSmall.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+    }
 
     &::before {
       content: '';
