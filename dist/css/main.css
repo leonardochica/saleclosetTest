@@ -851,10 +851,10 @@ body {
   position: relative; }
   @media (max-width: 500px) {
     .section__ofertas {
-      background: url("../images/backgroundofertasSmall.jpg");
+      background: url("../images/backgroundofertasSmall4.jpg");
       background-size: contain;
       background-attachment: local;
-      background-position: bottom; } }
+      background-position: top; } }
   .section__ofertas::before {
     content: '';
     position: absolute;
