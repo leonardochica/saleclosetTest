@@ -897,7 +897,6 @@ $slideHeightSmartphones: 380px;
   position: relative;
 
   @include for-smartphones {
-    background: url('../images/services/catalogos-de-ropa-sale.jpg');
     background-attachment: local;
     background-size: cover;
     background-position: top right;
@@ -1013,12 +1012,11 @@ $slideHeightSmartphones: 380px;
   justify-content: center;
   margin: 0;
   background: url('../images/contact/consulta-precios-prendas.jpg');
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-attachment: fixed;
 
   @include for-smartphones {
-    background: url('../images/contact/consulta-precios-prendas-sale.jpg');
     background-attachment: local;
     background-position: center;
     background-size: cover;

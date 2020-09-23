@@ -969,7 +969,6 @@ body {
   position: relative; }
   @media (max-width: 500px) {
     .section__services {
-      background: url("../images/services/catalogos-de-ropa-sale.jpg");
       background-attachment: local;
       background-size: cover;
       background-position: top right; } }
@@ -1051,12 +1050,11 @@ body {
   justify-content: center;
   margin: 0;
   background: url("../images/contact/consulta-precios-prendas.jpg");
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-attachment: fixed; }
   @media (max-width: 500px) {
     .section__contact {
-      background: url("../images/contact/consulta-precios-prendas-sale.jpg");
       background-attachment: local;
       background-position: center;
       background-size: cover; } }
