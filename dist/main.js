@@ -354,7 +354,7 @@ class UI {
           src="images/productos/${card.category}/articulo${
         index + 1
       }/image${i}.jpg"
-          alt=""
+          alt="${card.item}, ${card.brand} (Foto ${i})"
           class="card__image"
         />
       </a>

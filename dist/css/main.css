@@ -160,7 +160,7 @@ ul {
   .section__subheading {
     text-align: center;
     text-transform: uppercase;
-    color: #54183b;
+    color: #fff;
     font-size: 1.5rem;
     margin-bottom: 1rem; }
     @media (max-width: 750px) {
@@ -168,7 +168,8 @@ ul {
         font-size: 1.3rem; } }
     @media (max-width: 500px) {
       .section__subheading {
-        font-size: 1.1rem; } }
+        font-size: 1.1rem;
+        color: #54183b; } }
   .section__body {
     margin: 2rem 0; }
 
@@ -863,6 +864,14 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.1); }
+
+.section .ropa__subheading {
+  text-align: center;
+  color: #9e256c;
+  margin-top: 0.2rem; }
+  @media (max-width: 500px) {
+    .section .ropa__subheading {
+      font-size: 0.95rem; } }
 
 .section__body .filter__container {
   position: relative;

@@ -748,6 +748,16 @@ $slideHeightSmartphones: 380px;
 // Ropa Section
 // ===================================
 .section {
+  .ropa__subheading {
+    text-align: center;
+    color: $secondary-color;
+    margin-top: 0.2rem;
+
+    @include for-smartphones {
+      font-size: 0.95rem;
+    }
+  }
+
   &__body {
     .filter {
       &__container {

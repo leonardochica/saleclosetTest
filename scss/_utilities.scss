@@ -240,7 +240,7 @@ ul {
   &__subheading {
     text-align: center;
     text-transform: uppercase;
-    color: $dark-color;
+    color: $white-color;
     font-size: 1.5rem;
     margin-bottom: 1rem;
 
@@ -250,6 +250,7 @@ ul {
 
     @include for-smartphones {
       font-size: 1.1rem;
+      color: $dark-color;
     }
   }
 
