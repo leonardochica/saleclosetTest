@@ -552,9 +552,11 @@ function sliderLoading() {
   }
 }
 
-setTimeout(() => {
-  sliderLoading();
-}, 10);
+window.addEventListener('DOMContentLoaded', (e) => {
+  setTimeout(() => {
+    sliderLoading();
+  }, 10);
+});
 
 // Contact Form Validation
 const inputName = document.getElementById('input__name');

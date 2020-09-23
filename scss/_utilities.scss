@@ -338,12 +338,6 @@ $cardWidthXsmallSmartphones: 250px;
       max-width: $cardWidthXsmallSmartphones;
     }
 
-    &__top {
-      .splide {
-        visibility: visible !important;
-      }
-    }
-
     &__image {
       display: block;
       max-width: $cardWidthLargeScreen;

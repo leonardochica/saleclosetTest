@@ -210,8 +210,6 @@ ul {
     @media (max-width: 350px) {
       .products-wrapper .card {
         max-width: 250px; } }
-    .products-wrapper .card__top .splide {
-      visibility: visible !important; }
     .products-wrapper .card__image {
       display: block;
       max-width: 285px;
