@@ -525,7 +525,7 @@ body {
   left: 0;
   width: 100%;
   height: 490px;
-  background: url("../images/showcase/background.jpg");
+  background: url("../images/showcase/closet-de-ropa.jpg");
   background-size: cover;
   opacity: 0.2;
   z-index: -2; }
@@ -537,7 +537,9 @@ body {
       height: 430px; } }
   @media (max-width: 500px) {
     .showcase__background {
-      height: 380px; } }
+      height: 380px;
+      background: url("../images/showcase/closet-de-ropa-sale.jpg");
+      background-size: cover; } }
 
 @media (max-width: 500px) {
   .showcase .splide__arrow {
@@ -844,7 +846,7 @@ body {
     opacity: 1; } }
 
 .section__ofertas {
-  background: url("../images/backgroundofertas.jpg");
+  background: url("../images/sale-closet-descuentos-y-promociones.jpg");
   background-position: top;
   background-size: cover;
   background-attachment: fixed;
@@ -852,7 +854,7 @@ body {
   position: relative; }
   @media (max-width: 500px) {
     .section__ofertas {
-      background: url("../images/backgroundofertasSmall.jpg");
+      background: url("../images/almacenes-descuentos-y-promociones.jpg");
       background-size: contain;
       background-attachment: local;
       background-position: top; } }
@@ -957,7 +959,7 @@ body {
     margin-left: 0.5rem; }
 
 .section__services {
-  background: url("../images/services/background.jpg");
+  background: url("../images/services/catalogos-de-ropa.jpg");
   background-size: cover;
   background-position: bottom right;
   background-attachment: fixed;
@@ -967,7 +969,9 @@ body {
   position: relative; }
   @media (max-width: 500px) {
     .section__services {
+      background: url("../images/services/catalogos-de-ropa-sale.jpg");
       background-attachment: local;
+      background-size: cover;
       background-position: top right; } }
   .section__services::before {
     content: '';
@@ -1046,12 +1050,13 @@ body {
   position: relative;
   justify-content: center;
   margin: 0;
-  background: url("../images/contact/background.jpg");
+  background: url("../images/contact/consulta-precios-prendas.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed; }
   @media (max-width: 500px) {
     .section__contact {
+      background: url("../images/contact/consulta-precios-prendas-sale.jpg");
       background-attachment: local;
       background-position: center;
       background-size: cover; } }
