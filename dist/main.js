@@ -355,7 +355,7 @@ class UI {
         index + 1
       }/image${i}.jpg"
           alt="${card.item}, ${card.brand} (Foto ${i})"
-          class="card__image"
+          class="card__image" loading="lazy"
         />
       </a>
       </li>`;
