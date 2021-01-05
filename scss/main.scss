@@ -1471,6 +1471,10 @@ $slideHeightSmartphones: 380px;
   &__text {
     text-align: center;
     font-size: 0.7rem;
+
+    @include for-smartphones {
+      font-size: 0.5rem;
+    }
   }
 }
 

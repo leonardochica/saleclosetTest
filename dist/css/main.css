@@ -1362,6 +1362,9 @@ body {
   .copyright__text {
     text-align: center;
     font-size: 0.7rem; }
+    @media (max-width: 500px) {
+      .copyright__text {
+        font-size: 0.5rem; } }
 
 .section__message {
   margin-top: 2rem; }
